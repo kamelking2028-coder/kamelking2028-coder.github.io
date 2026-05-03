@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7002120025656260" crossorigin="anonymous"></script>
+
+    <title>Radios Monde By‑KML</title>
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<div class="info">
+    <h1>Bienvenue sur Radios Monde </h1>
+</div>
+<div>
+    <h3 style="text-align:center;"> Écoutez les stations du monde entier et consultez la méteo 
+    <p>Découvrez des milliers de radios internationales classées par pays, genre et  popularité.</p>
+    </h3>
+</div>
+
+
+
+<!--<header>
+    <h2 style="text-align:center;">Carte de votre pays</h2>
+</header>-->
+
+<!-- 🔵 Boutons -->
+<div class="top-left">
+     <a id="aboutBtn" class="btn-top">ℹ️ À propos</a>
+</div>
+
+<div class="top-right">
+      <a href="contact.html" class="btn-top">📩 Contact</a>
+
+</div>
+
+
+<!-- 🔵 Modale À propos -->
+<div id="aboutModal" class="modal">
+   <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>À propos</h2>
+        <p>Bienvenue sur Radios Monde By‑KML.</p>
+        <p>Projet créé par MHALLA Kamel.</p>
+        <p>Pour toute suggestion, utilisez la page Contact.</p>
+        <p>Bonne écoute.</p>
+   </div>
+</div>
+
+<!-- 🔵 Météo + Carte -->
+<div class="weather-map-wrapper">
+    <!-- Colonne météo -->
+    <div class="weather-column">
+        <div id="weather-local" class="weather-box">
+            <div class="weather-loading">Chargement météo locale...</div>
+        </div>
+
+        <div id="weather-radio" class="weather-box">
+            <div class="weather-loading">Météo externe(Radio)</div>
+        </div>
+    </div>
+</div>
+    <!-- Carte -->
+<div class="map-wrapper">
+    <div id="map"></div>
+</div>
+
+<!-- 🔵 Panneau météo détaillé -->
+<div id="weather-details" class="weather-details"></div>
+
+<div class="container">
+
+    <div class="controls">
+
+        <button class="toggle-btn" onclick="toggleCountries()">
+            <span>Choisir un pays</span>
+            <span class="arrow">▶</span>
+        </button>
+        <div id="country-list" class="country-list hidden"></div>
+        <label for="genre"><strong>Genre :</strong></label>
+        <select id="genre">
+            <option value="">Tous les genres</option>
+            <option value="pop">Pop</option>
+            <option value="rock">Rock</option>
+            <option value="news">News</option>
+            <option value="jazz">Jazz</option>
+            <option value="dance">Dance</option>
+        </select>
+
+    </div>
+
+</div>
+
+<!-- Onglets -->
+<div class="tabs">
+    <button class="tab-btn active" data-tab="all">Radios correspondants au pays</button>
+    <button class="tab-btn" data-tab="fav">Favoris</button>
+</div>
+
+<!-- Loader -->
+<div id="loader">
+    <div class="loader-spinner"></div>
+</div>
+
+<div class="search-box">
+    <input type="text" id="search" placeholder="Rechercher une radio...">
+    <p class="hint">Clique sur une radio pour écouter.</p>
+</div>
+
+<!-- Liste radios -->
+<div id="radios"></div>
+
+
+<!-- Lecteur audio -->
+<div id="audio-player">
+    <audio id="player" controls></audio>
+</div>
+
+<!-- MINI‑PLAYER -->
+<div id="mini-player">
+    <img id="mini-cover" src="">
+    <div class="title" id="mini-title"></div>
+    <button id="mini-stop">⏹</button>
+</div>
+
+<!-- Script principal -->
+<script>
+    const version = Date.now();
+    const s = document.createElement("script");
+    s.src = "script.js?v=" + version; 
+    document.head.appendChild(s);
+</script>    
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>    
+</body>
+</html>
