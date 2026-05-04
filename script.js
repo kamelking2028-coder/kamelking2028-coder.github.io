@@ -380,10 +380,7 @@ async function fetchRadios(codePays) {
                     stationuuid: "arabel-manuel"
                 });
             }
-            if (codePays === "GM") {
-                 await chargerRadiosGambie();
-            }
-
+        
 
 
             renderRadios();
