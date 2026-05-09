@@ -10,6 +10,11 @@
   "theme_color": "#000000",
   "icons": [
     {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
       "src": "icons/default.png",    
       "type": "image/png"
     },
