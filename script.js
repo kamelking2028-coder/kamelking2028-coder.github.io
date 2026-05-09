@@ -371,7 +371,7 @@ async function fetchRadios(codePays) {
                 allRadiosCache.push({
                     name: "Arabel (ouvrir le player)",
                     url: null,
-                    externalLink: "http://stream.arabel.fm/AraBel-AAC64/",
+                    externalLink: "http://stream.arabel.fm/AraBel-AAC64",
                     //=== externalLink: "https://www.arabel.fm/radioplayer/",===
                     favicon: "icons/Logo-AraBel.png",
                     countrycode: "BE",
