@@ -105,11 +105,12 @@ navigator.geolocation.getCurrentPosition(async pos => {
     try {
         const { latitude, longitude } = pos.coords;
         const data = await getWeather(latitude, longitude);
-
+        const flag = "./flags/flag.svg"
         document.getElementById("weather-local").innerHTML = `
             <div class="weather-city">Votre météo</div>
             <div class="weather-temp">${data.current_weather.temperature}°</div>
             <div class="weather-icon">${weatherIcons[data.current_weather.weathercode] || "☁️"}</div>
+            <div> class="pays-icon">${flag}</div>
         `;
         document.getElementById("weather-local").onclick = () =>
             showWeatherDetails(data, "Votre météo");
