@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://kamelking2028-coder.github.io/sitemap.xml
