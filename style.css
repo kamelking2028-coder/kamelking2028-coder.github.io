@@ -348,11 +348,11 @@ header svg {
 .radio-item {
     width: 100px;          /* Taille réduite */
     height: 100px;         /* Hauteur contrôlée */
-    background: #0d1b2a;
+    background: #15a4b4;
     padding: 10px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 0 10px #0004;
+    box-shadow: 0 0 10px #17a61944 ;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
