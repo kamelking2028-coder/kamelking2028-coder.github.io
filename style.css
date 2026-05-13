@@ -144,8 +144,14 @@ header svg {
     #audio-player {
         width: 38%; 
         position: auto;
-
-    }         
+    }
+    .radio-name{
+        top: 70%; 
+        position: absolute;
+    }
+    .radio-genre{
+        position: auto;
+    }
 }
 
 
@@ -372,7 +378,7 @@ header svg {
 
 .radio-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px #1e90ff;
+    box-shadow: 0 0 15px #1eff2b;
 }
 
 .radio-genre {
