@@ -147,10 +147,15 @@ body {
         width: 38%; 
         position: auto;
 
-    }
-    .country-list {
+    }  
+    .loader-spinner {
+         width: 24px;
+        height: 24px;
+        border-radius: 999px;
         border: 3px solid var(--border);
-    }    
+        border-top-color: var(--accent);
+        animation: spin 0.8s linear infinite;
+    }      
 }
 
 
