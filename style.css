@@ -88,7 +88,9 @@ header svg {
     display: flex;
     justify-content: center;
 }
-
+body {
+  overflow-x: hidden;
+}
 #map {
     width: 80%;
     height: 350px;
@@ -144,14 +146,8 @@ header svg {
     #audio-player {
         width: 38%; 
         position: auto;
-    }
-    .radio-name{
-        top: 70%; 
-        position: absolute;
-    }
-    .radio-genre{
-        position: auto;
-    }
+
+    }         
 }
 
 
@@ -352,13 +348,13 @@ header svg {
 
 
 .radio-item {
-    width: 100px;          /* Taille réduite */
-    height: 100px;         /* Hauteur contrôlée */
-    background: #1533b4;
+    width: 140px;          /* Taille réduite */
+    height: 140px;         /* Hauteur contrôlée */
+    background: #0d1b2a;
     padding: 10px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 0 10px #17a61944 ;
+    box-shadow: 0 0 10px #0004;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -378,7 +374,7 @@ header svg {
 
 .radio-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px #1eff2b;
+    box-shadow: 0 0 15px #1e90ff;
 }
 
 .radio-genre {
