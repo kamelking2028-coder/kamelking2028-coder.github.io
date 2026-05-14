@@ -147,7 +147,10 @@ body {
         width: 38%; 
         position: auto;
 
-    }         
+    }
+    .country-list {
+        border: 3px solid var(--border);
+    }    
 }
 
 
@@ -249,7 +252,7 @@ body {
     max-height: 300px;
     overflow-y: auto;
     background: var(--card-bg);
-    border: 1px solid var(--border);
+    border: 3px solid var(--border);
     border-radius: 12px;
     padding: 10px;
     margin-top: 10px;
