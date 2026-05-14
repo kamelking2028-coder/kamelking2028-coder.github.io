@@ -37,22 +37,32 @@ const weatherIcons = {
 // === ICI : initialisation au chargement ===//
 document.addEventListener("DOMContentLoaded", () => {
 
-    map = L.map("map").setView([20, 0], 2);
+    // 1) Initialiser la carte correctement (une seule fois)
+    map = L.map('map', {
+        scrollWheelZoom: false,
+        tap: false,
+        dragging: true
+    }).setView([20, 0], 2);
 
+    // 2) Ajouter le fond de carte
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
         attribution: "© OpenStreetMap"
     }).addTo(map);
-    
+
+    // 3) Charger les pays
     fetch("countries.json?v=" + Date.now())
         .then(res => res.json())
         .then(data => {
             countries = data;
             renderCountries(countries);
         });
-        
-    chargerRadios();
+
+    // 4) Charger les radios (si tu as cette fonction)
+    // chargerRadios();
+
 });
+
 
 // === Chargement pays ==
 
@@ -371,9 +381,9 @@ async function fetchRadios(codePays) {
             // Ajouts manuels
             if (codePays === "BE") {
                 allRadiosCache.push({
-                    name: "Arabel",
-                    url: "https://arabelfm.ice.infomaniak.ch/arabelprodcastfm.mp3",
-                    //==externalLink: "https://www.arabel.fm/radioplayer/",== 
+                    name: "Arabel (ouvrir le player)",
+                    url: null,
+                    externalLink: "https://www.arabel.fm/radioplayer/",
                     favicon: "icons/Logo-AraBel.png",
                     countrycode: "BE",
                     geo_lat: 50.8503,
