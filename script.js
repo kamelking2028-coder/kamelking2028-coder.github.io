@@ -33,11 +33,6 @@ const weatherIcons = {
     71: "❄️", 73: "❄️", 75: "❄️",
     95: "⛈️", 96: "⛈️", 99: "⛈️"
 };
-fetch(req).catch(() => {
-    if (req.mode === "navigate") {
-        return caches.match("/offline.html");
-    }
-})
 
 // === ICI : initialisation au chargement ===//
 document.addEventListener("DOMContentLoaded", () => {
