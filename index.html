@@ -153,6 +153,12 @@
     s.src = "script.js?v=" + version; 
     document.head.appendChild(s);
 </script>    
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>    
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> 
+<script>
+if ("serviceWorker" in navigator) {
+     navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
 </body>
 </html>
