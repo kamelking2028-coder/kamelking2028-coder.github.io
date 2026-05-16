@@ -7,7 +7,10 @@ const CORE_ASSETS = [
   "/style.css",
   "/script.js",
   "/manifest.json",
-  "/offline.html"
+  "/offline.html",
+  "/Comments.html",
+  "/sitemap.xml",
+  "heure-meteo.js"
 ];
 
 // Installation
