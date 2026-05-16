@@ -10,7 +10,7 @@ const CORE_ASSETS = [
   "/offline.html",
   "/Comments.html",
   "/sitemap.xml",
-  "heure-meteo.js"
+  "/heure-meteo.js"
 ];
 
 // Installation
