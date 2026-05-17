@@ -377,6 +377,12 @@ async function fetchRadios(codePays) {
             }
 
             allRadiosCache = radios;
+           // Special Arabel 
+            document.getElementById("playArabel").onclick = () => {
+                const frame = document.getElementById("arabelFrame");
+                frame.src = "https://www.dailymotion.com/embed/video/x7teocz?autoplay=1";
+                document.getElementById("arabelContainer").style.display = "block";
+           };
 
             // Ajouts manuels Radio.
             if (codePays === "BE") {
