@@ -389,12 +389,12 @@ body {
     transform: scale(1.05);
     box-shadow: 0 0 15px #1e90ff;
 }
-
 .radio-genre {
+    position: absolute;
+    top: 0;  
     font-size: 0.8rem;
-    color: var(--muted);
+    color: #ff1e; 
 }
-
 .fav-btn {
     position: absolute;
     top: 8px;
