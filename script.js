@@ -382,7 +382,7 @@ async function fetchRadios(codePays) {
             if (codePays === "BE") {
                 allRadiosCache.push({
                     name: "Arabel",
-                    url: "https://www.dailymotion.com/embed/video/x7teocz?autoplay=1&mute=0",
+                    url: "https://www.dailymotion.com/embed/video/x7teocz",
                     favicon: "icons/Logo-AraBel.png",
                     countrycode: "BE",
                     geo_lat: 50.8503,
