@@ -374,6 +374,7 @@ body {
     position: relative;
 }
 .radio-name {
+    font-weight: bold;
     position:absolute;
     top: 100px;
     color: #ff3811ee
