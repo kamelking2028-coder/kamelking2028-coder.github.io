@@ -378,12 +378,11 @@ async function fetchRadios(codePays) {
 
             allRadiosCache = radios;
 
-            // Ajouts manuels
+            // Ajouts manuels Radio.
             if (codePays === "BE") {
                 allRadiosCache.push({
                     name: "Arabel",
-                    url: http://stream.arabel.fm/AraBel-AAC64,
-                  
+                    url: "http://stream.arabel.fm/AraBel-AAC64",
                     favicon: "icons/Logo-AraBel.png",
                     countrycode: "BE",
                     geo_lat: 50.8503,
