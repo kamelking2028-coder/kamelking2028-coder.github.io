@@ -382,7 +382,7 @@ async function fetchRadios(codePays) {
             if (codePays === "BE") {
                 allRadiosCache.push({
                     name: "Arabel",
-                    url: "http://stream.arabel.fm/AraBel-AAC64",
+                    url: null,
                     favicon: "icons/Logo-AraBel.png",
                     countrycode: "BE",
                     geo_lat: 50.8503,
