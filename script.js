@@ -365,39 +365,12 @@ async function fetchRadios(codePays) {
     if (genre) params.append("tag", genre);
 
     showLoader();
-    async function fetchRadios(codePays) {
-    if (!codePays) {
-        radiosList.innerHTML = "<p>Choisissez un pays pour afficher les radios.</p>";
-        return;
-    }
-
-    if (!workingServer) {
-        workingServer = await findWorkingServer();
-        if (!workingServer) {
-            radiosList.innerHTML = "<p>Aucun serveur RadioBrowser disponible.</p>";
-            return;
-        }
-    }
-
-    const genre = genreSelect.value;
-
-    const params = new URLSearchParams({
-        countrycode: codePays,
-        hidebroken: "true",
-        order: "clickcount",
-        reverse: "true",
-        limit: "100"
-    });
-
-    if (genre) params.append("tag", genre);
-
-    showLoader();
 
     fetch(`${workingServer}/json/stations/search?${params}`)
         .then(r => r.json())
         .then(radios => {
             hideLoader();
-
+            // 🔥🔥🔥 Fallback AdSense : si l’API renvoie vide
             if (!radios || radios.length === 0) {
                 radiosList.innerHTML = "<p>Aucune radio trouvée pour ce pays.</p>";
                 return;
@@ -405,11 +378,12 @@ async function fetchRadios(codePays) {
 
             allRadiosCache = radios;
 
-            // Ajout manuel Arabel
+            // Ajouts manuels
             if (codePays === "BE") {
                 allRadiosCache.push({
-                    name: "Arabel",
-                    url: "arabel",
+                    name: "Arabel (ouvrir le player)",
+                    url: null,
+                    externalLink: "https://www.arabel.fm/radioplayer/",
                     favicon: "icons/Logo-AraBel.png",
                     countrycode: "BE",
                     geo_lat: 50.8503,
@@ -418,6 +392,8 @@ async function fetchRadios(codePays) {
                     stationuuid: "arabel-manuel"
                 });
             }
+        
+
 
             renderRadios();
         })
@@ -426,7 +402,7 @@ async function fetchRadios(codePays) {
             radiosList.innerHTML = "<p>Impossible de charger les radios.</p>";
         });
 }
-        
+
 // === Filtre recherche radios ===
 function filterRadiosBySearch(radios) {
     const q = document.getElementById("search").value.toLowerCase().trim();
