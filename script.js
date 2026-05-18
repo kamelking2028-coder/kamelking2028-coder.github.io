@@ -380,6 +380,13 @@ async function fetchRadios(codePays) {
 
             // Ajouts manuels Radio.
             if (codePays === "BE") {
+               document.getElementById("playArabel").onclick = () => {
+                   const frame = document.getElementById("arabelFrame");
+                   frame.src = "https://www.dailymotion.com/embed/video/x7teocz?autoplay=1";
+                   document.getElementById("arabelContainer").style.display = "block";
+               };
+               
+
                 allRadiosCache.push({
                     name: "Arabel",
                     url: "https://www.dailymotion.com/embed/video/x7teocz",
