@@ -370,7 +370,8 @@ async function fetchRadios(codePays) {
         .then(r => r.json())
         .then(radios => {
             hideLoader();
-            // 🔥🔥🔥 Fallback AdSense : si l’API renvoie vide
+
+            // Fallback
             if (!radios || radios.length === 0) {
                 radiosList.innerHTML = "<p>Aucune radio trouvée pour ce pays.</p>";
                 return;
@@ -378,12 +379,11 @@ async function fetchRadios(codePays) {
 
             allRadiosCache = radios;
 
-            // Ajouts manuels
+     // Ajout manuel Arabel
             if (codePays === "BE") {
                 allRadiosCache.push({
-                    name: "Arabel (ouvrir le player)",
-                    url: null,
-                    externalLink: "https://www.arabel.fm/radioplayer/",
+                    name: "Arabel",
+                    url: "arabel",
                     favicon: "icons/Logo-AraBel.png",
                     countrycode: "BE",
                     geo_lat: 50.8503,
@@ -392,9 +392,8 @@ async function fetchRadios(codePays) {
                     stationuuid: "arabel-manuel"
                 });
             }
-        
 
-
+            // 👉 C’est ici que renderRadios() doit être appelé
             renderRadios();
         })
         .catch(() => {
@@ -451,6 +450,13 @@ function renderRadios() {
         };
         
         card.onclick = async () => {
+            if (radio.stationuuid === "arabel-manuel") {
+                const frame = document.getElementById("arabelFrame");
+                frame.src = "https://www.youtube.com/embed/live_stream?channel=UC7wz0pQfM9vDOMkMt2rt7xA&autoplay=1";
+                document.getElementById("arabelContainer").style.display = "block";
+                return;
+            }
+
 
             if (radio.externalLink) {
                 window.open(radio.externalLink, "_blank");
