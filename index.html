@@ -1,28 +1,17 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Radios Monde By‑KML</title>
     <meta property="og:image" content="https://kamelking2028-coder.github.io/icons/icon-512.png">
     <meta property="og:title" content="Radio World – Écoutez les radios du monde entier">
-    <meta name="description" content="Accédez gratuitement aux radios du monde entier grâce à une carte interactive simple et rapide, avec météo en temps réel.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- (facultatif mais recommandé) Open Graph -->
-    <meta property="og:url" content="https://kamelking2028-coder.github.io">
-    <!-- Google tag (gtag.js) pour calculer les visites-->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VPX5D1T791"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <meta property="og:description" content="Carte interactive des radios du monde avec météo.">
 
-        gtag('config', 'G-VPX5D1T791');
-    </script>
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7002120025656260" crossorigin="anonymous"></script>
 
-    <!---<title>Radios Monde By‑KML</title>-->
+    <title>Radios Monde By‑KML</title>
+
     <!-- Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -31,13 +20,13 @@
 
 </head>
 <body>
-
+ 
 <div class="info">
     <h1>Bienvenue sur Radios Monde </h1>
 </div>
 <div>
-    <h3 style="text-align:center;"> Écoutez les radios du monde entier et consultez la méteo 
-    <p>Découvrez des milliers de radios classées par pays, genre et popularité.</p>
+    <h3 style="text-align:center;"> Écoutez les stations du monde entier et consultez la méteo 
+    <p>Découvrez des milliers de radios internationales classées par pays, genre et  popularité.</p>
     </h3>
 </div>
 
@@ -79,7 +68,7 @@
         </div>
 
         <div id="weather-radio" class="weather-box">
-            <div class="weather-loading"> Météo externe(Radio)</div>
+            <div class="weather-loading">Météo externe(Radio)</div>
         </div>
     </div>
 </div>
@@ -113,21 +102,11 @@
     </div>
 
 </div>
- <!--Arabel-->
-<button class="radio-btn" id="playArabel">Écouter Arabel</button>
-<div id="arabelContainer" style="display:none;">
-    <iframe id="arabelFrame"
-        width="100%"
-        height="300"
-        frameborder="0"
-        allow="autoplay"
-        allowfullscreen>
-    </iframe>
-</div>
+
 <!-- Onglets -->
 <div class="tabs">
-    <button class="tab-btn active" data-tab="all">Radios correspondants au pays</button>
-    <button class="tab-btn" data-tab="fav">Favoris</button>
+    <button class="tab-btn active" data-tab="all"><strong>Radios correspondants au pays</strong></button>
+    <button class="tab-btn" data-tab="fav"><strong>❤️Favoris❤️</strong></button>
 </div>
 
 <!-- Loader -->
@@ -142,7 +121,16 @@
 
 <!-- Liste radios -->
 <div id="radios"></div>
-
+<!--ARABEL-->
+<div id="arabelContainer" style="display:none;">
+    <iframe id="arabelFrame"
+        width="100%"
+        height="300"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+    </iframe>
+</div>
 
 <!-- Lecteur audio -->
 <div id="audio-player">
@@ -162,13 +150,12 @@
     const s = document.createElement("script");
     s.src = "script.js?v=" + version; 
     document.head.appendChild(s);
-</script>    
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> 
+</script>   
 <script>
 if ("serviceWorker" in navigator) {
      navigator.serviceWorker.register("service-worker.js");
 }
-</script>
-
+</script> 
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>    
 </body>
 </html>
