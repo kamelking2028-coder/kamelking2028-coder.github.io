@@ -1,61 +1,157 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+    <meta property="og:image" content="https://kamelking2028-coder.github.io/icons/icon-512.png">
+    <meta property="og:title" content="Radio World – Écoutez les radios du monde entier">
+    <meta property="og:description" content="Carte interactive des radios du monde avec météo.">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📺 TV Monde - By KML</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7002120025656260" crossorigin="anonymous"></script>
 
-    <!-- Ton unique CSS -->
+    <title>Radios Monde By‑KML</title>
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="icons/icon-512.png">
 
-    <!-- AdSense -->
-    <script async 
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXX"
-        crossorigin="anonymous">
-    </script>
 </head>
-
 <body>
+<!---<a href="confidentialite.html" class="btn">Confidentialité</a>-->
+<div class="info">
+    <h1>Bienvenue sur Radios Monde </h1>
+</div>
+<div>
+    <h3 style="text-align:center;"> Écoutez les stations du monde entier et consultez la méteo 
+    <p>Découvrez des milliers de radios internationales classées par pays, genre et  popularité.</p>
+    </h3>
+</div>
 
-    <header>
-        <h1>📺 TV Monde</h1>
-        <p>Regardez les chaînes TV du monde entier gratuitement.</p>
-    </header>
 
-    <p><strong>Vos chaînes TV selon les pays</strong></p>
+<!-- 🔵 Boutons -->
+<div class="top-left">
+     <a id="aboutBtn" class="btn-top">ℹ️ À propos</a>
+</div>
 
-    <main>
-        <!-- Liste des pays -->
-        <aside id="countries"></aside>
-        
-        <!-- Liste des chaînes -->
-        <section id="channels"></section>
-        <div id="tv-player-container">
-            <iframe id="tv-player" src="" allowfullscreen></iframe>
-         </div>
+<div class="top-right">
+      <a href="contact.html" class="btn-top">📩 Contact</a>
 
-        <!-- Lecteur vidéo -->
-        <section id="player">
-            <div id="video-container">
-                <p>Sélectionnez une chaîne pour commencer.</p>
-            </div>
+</div>
 
-            <!-- Pub sous le lecteur -->
-            <div class="ads">
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-XXXX"
-                    data-ad-slot="1234567890"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true">
-                </ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-        </section>
-    </main>
 
-    <script src="tv.js"></script>
+<!-- 🔵 Modale À propos -->
+<div id="aboutModal" class="modal">
+   <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>À propos</h2>
+        <p>Bienvenue sur Radios Monde By‑KML.</p>
+        <p>Projet créé par MHALLA Kamel.</p>
+
+        <p>Pour toute suggestion, utilisez la page Contact.</p>
+        <p>Bonne écoute.</p>
+   </div>
+</div>
+
+<!-- 🔵 Météo + Carte -->
+<div class="weather-map-wrapper">
+    <!-- Colonne météo -->
+    <div class="weather-column">
+        <div id="weather-local" class="weather-box">
+            <div class="weather-loading">Chargement météo locale...</div>
+        </div>
+
+        <div id="weather-radio" class="weather-box">
+            <div class="weather-loading">Météo externe(Radio)</div>
+        </div>
+    </div>
+</div>
+    <!-- Carte -->
+<div class="map-wrapper">
+    <div id="map"></div>
+</div>
+
+<!-- 🔵 Panneau météo détaillé -->
+<div id="weather-details" class="weather-details"></div>
+
+<div class="container">
+
+    <div class="controls">
+
+        <button class="toggle-btn" onclick="toggleCountries()">
+            <span>Choisir un pays</span>
+            <span class="arrow">▶</span>
+        </button>
+        <div id="country-list" class="country-list hidden"></div>
+        <label for="genre"><strong>Genre :</strong></label>
+        <select id="genre">
+            <option value="">Tous les genres</option>
+            <option value="pop">Pop</option>
+            <option value="rock">Rock</option>
+            <option value="news">News</option>
+            <option value="jazz">Jazz</option>
+            <option value="dance">Dance</option>
+        </select>
+
+    </div>
+
+</div>
+
+<!-- Onglets -->
+<div class="tabs">
+    <button class="tab-btn active" data-tab="all"><strong>Radios correspondants au pays</strong></button>
+    <button class="tab-btn" data-tab="fav"><strong>❤️Favoris❤️</strong></button>
+</div>
+
+<!-- Loader -->
+<div id="loader">
+    <div class="loader-spinner"></div>
+</div>
+
+<div class="search-box">
+    <input type="text" id="search" placeholder="Rechercher une radio...">
+    <p class="hint"><strong>Clique sur une radio pour écouter.</strong></p>
+</div>
+
+<!-- Liste radios -->
+<div id="radios"></div>
+<!--ARABEL-->
+<div id="arabelContainer" style="display:none;">
+    <iframe id="arabelFrame"
+        width="100%"
+        height="300"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+    </iframe>
+</div>
+
+<!-- Lecteur audio -->
+<div id="audio-player">
+    <audio id="player" controls></audio>
+</div>
+
+<!-- MINI‑PLAYER -->
+<div id="mini-player">
+    <img id="mini-cover" src="">
+    <div class="title" id="mini-title"></div>
+    <button id="mini-stop">⏹</button>
+</div>
+
+<!-- Script principal -->
+<script>
+    const version = Date.now();
+    const s = document.createElement("script");
+    s.src = "script.js?v=" + version; 
+    document.head.appendChild(s);
+</script>   
+<script>
+if ("serviceWorker" in navigator) {
+     navigator.serviceWorker.register("service-worker.js");
+}
+</script> 
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>    
 </body>
 </html>
