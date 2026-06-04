@@ -13,15 +13,19 @@
     <title>Radios Monde By‑KML</title>
 
     <!-- Leaflet -->
+    
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
-   <!-- <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>-->
+    <!--<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>-->
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="icons/icon-512.png">
 
+
 </head>
 <body>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <!---<a href="confidentialite.html" class="btn">Confidentialité</a>-->
+     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <div class="info">
     <h1>Bienvenue sur Radios Monde </h1>
 </div>
@@ -148,10 +152,12 @@
     s.src = "script.js?v=" + version; 
     document.head.appendChild(s);
 </script>   
+
 <script>
 if ("serviceWorker" in navigator) {
      navigator.serviceWorker.register("service-worker.js");
 }
-
+</script> 
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>    
 </body>
 </html>
