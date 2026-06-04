@@ -46,8 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 2) Ajouter le fond de carte
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    
         maxZoom: 19,
-        attribution: "© OpenStreetMap"
+        attribution: "© OpenStreetMap",
+        detectRetina: true
     }).addTo(map);
 
     // 3) Charger les pays
@@ -230,7 +232,9 @@ function getFlagIcon(code) {
 
     // 2) Ajouter le fond satellite
     L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
-        attribution: "Tiles © Esri"
+  
+        attribution: "Tiles © Esri",
+        detectRetina: true
     }).addTo(map);
 
     // 3) Fix affichage
@@ -265,7 +269,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 2) Ajouter le fond satellite
     L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
-        attribution: "Tiles © Esri"
+        attribution: "Tiles © Esri",
+        detectRetina: true
     }).addTo(map);
 
     // 3) Fix affichage
@@ -296,7 +301,8 @@ function afficherCarteLeaflet(codePays) {
             if (!map) {
                 map = L.map("map").setView([lat, lon], 5);
                 L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
-                    attribution: "Tiles © Esri"
+                    attribution: "Tiles © Esri",
+                    detectRetina: true
                 }).addTo(map);
             } else {
                 map.setView([lat, lon], 5);
