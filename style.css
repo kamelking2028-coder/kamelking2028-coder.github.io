@@ -82,15 +82,16 @@ header svg {
     border-radius: 16px;
 }
 
-
 .map-wrapper {
     flex: 1;
     display: flex;
     justify-content: center;
 }
+
 body {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
+
 #map {
     width: 80%;
     height: 350px;
@@ -101,7 +102,7 @@ body {
 }
 
                              /**** Version mobile ****/
-@media (max-width: 600px) {
+@media (max-width: 667px) {
     
     #map {
         width: 99%;
@@ -120,28 +121,33 @@ body {
           width: 21%;
     }
     #aboutBtn {
+        background:#d7eaff;
         position:fixed;
         top: 3%;
         left: 1%;  
                 
     }
-     .top-right  {
+    .top-right  {
         position: absolute; 
         top: 8%;
         right: 5%;
     }
-     #aboutModal {
+    #aboutModal {
         position:absolute
     }
 
-      .radio-item {
-          display: flex ;
+    .radio-item {
+        display: flex ;
          
     }
+    .radio-genre {
+        position: absolute;
+        top:1px;
+    } 
     #weather-details.weather-details.show {
   
         position: absolute;
-         width:80%                   
+        width:80%                   
     }
     #audio-player {
         width: 38%; 
@@ -166,7 +172,6 @@ body {
         margin-top: 10px;
     }
 }
-
 
 .weather-column {
     display: flex;
@@ -209,9 +214,6 @@ body {
 .weather-icon {
     font-size: 2rem;
 }
-
-
-
 
 /* Weather details panel */
 .weather-details {
@@ -267,7 +269,7 @@ body {
     padding: 10px;
     margin-top: 10px;
 }
-/* Hidden */
+         /* Hidden */
 .hidden {
     display: none !important;
 }
@@ -331,7 +333,7 @@ body {
     to { transform: rotate(360deg); }
 }
 
-/* Search */
+            /* Search */
 .search-box {
     margin: 10px 0;
 }
@@ -358,8 +360,6 @@ body {
     /*margin-top: 10px;*/
 }
 
-
-
 .radio-item {
     width: 140px;          /* Taille réduite */
     height: 140px;         /* Hauteur contrôlée */
@@ -377,7 +377,7 @@ body {
     font-weight: bold;
     position:absolute;
     top: 100px;
-    color: #ff3811ee
+    color: #acff11ee
     
 }
 .radio-card img {
@@ -408,8 +408,6 @@ body {
     height: 60px;
 }
 
-
-
 /* Audio player */
 #audio-player {
     position: fixed;
@@ -423,6 +421,7 @@ body {
 
 #audio-player audio {
     width: 100%;
+    height:20px;
 }
 
 /* Mini player */
@@ -500,6 +499,11 @@ body {
         width: 500%;
     }
    
+}
+/* Correction du flou des tuiles Leaflet */
+.leaflet-tile {
+  image-rendering: crisp-edges; /* ou pixelated */
+  transform: scale(1); /* évite le flou */
 }
 
 
