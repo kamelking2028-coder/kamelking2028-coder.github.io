@@ -12,7 +12,7 @@
   "icons": [
     {
       "src": "icons/icon-192.png", 
-      "sizes": "1024x1024",
+       "sizes": "1024x1024",  
       "type": "image/png"
     },
     {
@@ -31,4 +31,17 @@
       "type": "image/png"
     }
   ]
+  "screenshots": [
+    {
+    "src": "icons/screenshot-map.png",
+    "sizes": "1280x720",
+    "type": "image/png"
+    },
+    {
+    "src": "icons/screenshot-player.png",
+    "sizes": "1280x720",
+    "type": "image/png"
+    }
+  ]
+
 }
