@@ -10,7 +10,12 @@ const CORE_ASSETS = [
   "/offline.html",
   "/Comments.html",
   "/sitemap.xml",
-  "/heure-meteo.js"
+  "/heure-meteo.js",
+
+  // ✅ Ajout des icônes nécessaires hors‑ligne
+  "/icons/default-cover-512.png",
+  "/icons/wifi.png",
+  "/icons/icon-256.png"
 ];
 
 // Installation
@@ -31,26 +36,23 @@ self.addEventListener("activate", event => {
   self.clients.claim();
 });
 
-// Stratégie intelligente :
-// 1. Laisse passer les requêtes externes (Leaflet, API, tuiles, radios)
-// 2. Cache les fichiers locaux
-// 3. Offline propre
+// Stratégie intelligente
 self.addEventListener("fetch", event => {
   const req = event.request;
   const url = new URL(req.url);
 
   // 1. Ne JAMAIS bloquer les tuiles Leaflet ou les API
   if (
-    url.hostname.includes("arcgisonline.com") ||   // tuiles carte
-    url.hostname.includes("tile.openstreetmap") || // autre tuiles
-    url.hostname.includes("flagcdn.com") ||        // drapeaux externes
-    url.hostname.includes("open-meteo.com") ||     // météo
-    url.pathname.includes("/stream")               // radios
+    url.hostname.includes("arcgisonline.com") ||
+    url.hostname.includes("tile.openstreetmap") ||
+    url.hostname.includes("flagcdn.com") ||
+    url.hostname.includes("open-meteo.com") ||
+    url.pathname.includes("/stream")
   ) {
-    return; // laisser passer sans intercepter
+    return;
   }
 
-  // 2. Pour les fichiers locaux → cache-first
+  // 2. Pour les fichiers locaux → cache‑first
   event.respondWith(
     caches.match(req).then(cached => {
       return (
