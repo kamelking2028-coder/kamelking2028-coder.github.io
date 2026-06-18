@@ -506,8 +506,8 @@ body {
   transform: scale(1); /* évite le flou */
 }
 body {
-  background-color: #0b0c1a; /* ton fond bleu foncé */
-  color: #ffffff; /* texte blanc lisible */
+  background-color: #0b0c1a !important; /* fond bleu nuit */
+  color: #ffffff !important; /* texte blanc forcé */
   font-family: Arial, sans-serif;
   line-height: 1.6;
 }
