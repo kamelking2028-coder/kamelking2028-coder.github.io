@@ -506,8 +506,10 @@ body {
   transform: scale(1); /* évite le flou */
 }
 body {
-  background: linear-gradient(180deg, #0b0c1a 0%, #1a1c2e 100%);
-  color: #f5f5f5;
+  background-color: #0b0c1a; /* ton fond bleu foncé */
+  color: #ffffff; /* texte blanc lisible */
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 h1, h2, h3 {
   color: #4da6ff; /* bleu clair pour les titres */
