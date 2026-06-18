@@ -505,5 +505,21 @@ body {
   image-rendering: crisp-edges; /* ou pixelated */
   transform: scale(1); /* évite le flou */
 }
+.btn-retour {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #0078ff;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-retour:hover {
+  background-color: #005fcc;
+  transform: scale(1.05);
+}
 
 
