@@ -25,9 +25,7 @@
 
 </head>
 <body>
-    <nav>
-        <a href="a-propos.html">À propos</a>
-    </nav>
+    
 <!---<a href="confidentialite.html" class="btn">Confidentialité</a>-->
      <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <div class="info">
@@ -45,18 +43,16 @@
 <div class="top-right">
       <a href="contact.html" class="btn-top">📩 Contact</a>
 </div>
-<!-- 🔵 Modale À propos -->
-<div id="aboutModal" class="modal">
-   <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>À propos</h2>
-        <p>Bienvenue sur Radios Monde By‑KML.</p>
-        <p>Projet créé par MHALLA Kamel.</p>
+<script>
+const btn = document.getElementById("btnApropos");
+const modal = document.getElementById("modalApropos");
+const closeBtn = document.querySelector(".close");
 
-        <p>Pour toute suggestion, utilisez la page Contact.</p>
-        <p>Bonne écoute.</p>
-   </div>
-</div>
+btn.onclick = () => modal.style.display = "block";
+closeBtn.onclick = () => modal.style.display = "none";
+window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+</script>
+
 <!-- 🔵 Météo + Carte -->
 <div class="weather-map-wrapper">
     <!-- Colonne météo -->
