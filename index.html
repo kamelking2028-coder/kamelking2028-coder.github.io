@@ -31,21 +31,25 @@
     </h3>
 </div>
 <!-- 🔵 Boutons -->
-<div class="top-left">
-     <a id="aboutBtn" class="btn-top">ℹ️ À propos</a>
-</div>
-<div class="top-right">
-      <a href="contact.html" class="btn-top">📩 Contact</a>
-</div>
 <script>
-const btn = document.getElementById("btnApropos");
-const modal = document.getElementById("modalApropos");
+const btn = document.getElementById("aboutBtn");      // ID correct
+const modal = document.getElementById("aboutModal");  // ID correct
 const closeBtn = document.querySelector(".close");
 
-btn.onclick = () => modal.style.display = "block";
+btn.onclick = (e) => {
+    e.preventDefault();
+    modal.style.display = "block";
+};
+
 closeBtn.onclick = () => modal.style.display = "none";
-window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+
+window.onclick = (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+};
 </script>
+
 
 <!-- 🔵 Météo + Carte -->
 <div class="weather-map-wrapper">
