@@ -361,8 +361,8 @@ body {
 }
 
 .radio-item {
-    width: 140px;          /* Taille réduite */
-    height: 140px;         /* Hauteur contrôlée */
+    width: 100px;          /* Taille réduite */
+    height: 100px;         /* Hauteur contrôlée */
     background: #0d1b2a;
     padding: 10px;
     border-radius: 12px;
@@ -376,7 +376,7 @@ body {
 .radio-name {
     font-weight: bold;
     position:absolute;
-    top: 100px;
+    top: 60px;
     color: #acff11ee
     
 }
