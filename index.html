@@ -9,7 +9,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7002120025656260" crossorigin="anonymous"></script>
     <title>Radios Monde By‑KML</title>
     <!-- Leaflet -->
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="/manifest.webmanifest">
     <link rel="preload" href="style.css" as="style">
     <link rel="preload" href="script.js" as="script">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
@@ -36,6 +36,11 @@
     <p>Découvrez des milliers de radios internationales classées par pays, genre et  popularité.</p>
     </h3>
 </div>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/service-worker.js");
+}
+</script>    
 <!-- 🔵 Boutons -->
 <script>
 const btn = document.getElementById("aboutBtn");      // ID correct
@@ -137,12 +142,6 @@ window.onclick = (e) => {
     s.src = "script.js?v=" + version; 
     document.head.appendChild(s);
 </script>   
-
-<script>
-if ("serviceWorker" in navigator) {
-     navigator.serviceWorker.register("service-worker.js");
-}
-</script> 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>   
 <script>
 if ("serviceWorker" in navigator) {
