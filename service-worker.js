@@ -6,16 +6,17 @@ const CORE_ASSETS = [
   "/index.html",
   "/style.css",
   "/script.js",
-  "/manifest.json",
+  "/manifest.webmanifest",
   "/offline.html",
   "/Comments.html",
   "/sitemap.xml",
   "/heure-meteo.js",
 
-  // ✅ Ajout des icônes nécessaires hors‑ligne
+  // Icônes nécessaires hors‑ligne
   "/icons/default-cover-512.png",
   "/icons/wifi.png",
-  "/icons/icon-256.png"
+  "/icons/icon-256.png",
+  "/icons/icon-512.png"
 ];
 
 // Installation
@@ -41,7 +42,7 @@ self.addEventListener("fetch", event => {
   const req = event.request;
   const url = new URL(req.url);
 
-  // 1. Ne JAMAIS bloquer les tuiles Leaflet ou les API
+  // Ne jamais bloquer les ressources externes
   if (
     url.hostname.includes("arcgisonline.com") ||
     url.hostname.includes("tile.openstreetmap") ||
@@ -52,7 +53,7 @@ self.addEventListener("fetch", event => {
     return;
   }
 
-  // 2. Pour les fichiers locaux → cache‑first
+  // Cache-first pour les fichiers locaux
   event.respondWith(
     caches.match(req).then(cached => {
       return (
