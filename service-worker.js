@@ -6,7 +6,7 @@ const CORE_ASSETS = [
   "/index.html",
   "/style.css",
   "/script.js",
-  "/manifest.webmanifest",
+  "/manifest.json",
   "/offline.html",
   "/Comments.html",
   "/sitemap.xml",
