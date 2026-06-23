@@ -1,141 +1,85 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Radios Monde By‑KML</title>
+
+    <!-- Open Graph -->
     <meta property="og:image" content="https://kamelking2028-coder.github.io/icons/icon-512.png">
     <meta property="og:title" content="Radio World – Écoutez les radios du monde entier">
     <meta property="og:description" content="Carte interactive des radios du monde avec météo.">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7002120025656260" crossorigin="anonymous"></script>
-    <title>Radios Monde By‑KML</title>
-    <!-- Leaflet -->
-    <link rel="manifest" href="manifest.json">
-    <link rel="preload" href="style.css" as="style">
-    <link rel="preload" href="script.js" as="script">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
-    <!--<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>-->
-    <link rel="stylesheet" href="style.css?v=3">
-    <script defer src="script.js?v=3"></script>
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.webmanifest">
     <link rel="icon" type="image/png" href="icons/icon-512.png">
-    <!-- 🔵 Bouton À propos -->
- 
-<!---Section blog-->
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog – Radio Monde</title>
 
-  <link rel="stylesheet" href="blog.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css?v=3">
+
+    <!-- Scripts -->
+    <script defer src="script.js?v=3"></script>
 </head>
+
 <body>
-<header class="blog-header">
-  <h1>📰 Blog Radio Monde</h1>
-  <p>Actualités, météo, radios du monde et nouveautés du projet.</p>
-</header>
 
-<main class="blog-container">
-
-  <!-- ARTICLE 1 -->
-  <article class="post">
-    <img src="images/blog1.jpg" alt="Radios Afrique">
-    <div class="post-content">
-      <h2><a href="articles/radios-afrique.html">Les radios d’Afrique à découvrir</a></h2>
-      <p>Un voyage sonore à travers les stations les plus populaires du continent...</p>
-      <a class="read-more" href="articles/radios-afrique.html">Lire la suite →</a>
-    </div>
-  </article>
-
-  <!-- ARTICLE 2 -->
-  <article class="post">
-    <img src="images/blog2.jpg" alt="Météo Bruxelles">
-    <div class="post-content">
-      <h2><a href="articles/meteo-bruxelles.html">Météo à Bruxelles : quelles radios écouter selon le temps</a></h2>
-      <p>Pluie, soleil ou vent : voici les radios parfaites selon l’humeur du ciel...</p>
-      <a class="read-more" href="articles/meteo-bruxelles.html">Lire la suite →</a>
-    </div>
-  </article>
-
-  <!-- ARTICLE 3 -->
-  <article class="post">
-    <img src="images/blog3.jpg" alt="Nouveautés Radio Monde">
-    <div class="post-content">
-      <h2><a href="articles/nouveautes.html">Nouveautés sur Radio Monde</a></h2>
-      <p>Découvrez les dernières améliorations, stations ajoutées et futures fonctionnalités...</p>
-      <a class="read-more" href="articles/nouveautes.html">Lire la suite →</a>
-    </div>
-  </article>
-
-</main>
-
+<!-- 🔵 HEADER -->
 <div class="top-left">
-  <a id="aboutBtn" class="btn-top" href="#">ℹ️ À propos</a>
+  <a id="aboutBtn" class="btn-top" href="#">ℹ️ À propos</a>
 </div>
+
 <div class="top-right">
-      <a href="contact.html" class="btn-top">📩 Contact</a>
-</div>    
-<!---<a href="confidentialite.html" class="btn">Confidentialité</a>-->
-     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<div class="info">
-    <h1>Bienvenue sur Radios Monde </h1>
+  <a href="blog.html" class="btn-top">📰 Blog</a>
+  <a href="contact.html" class="btn-top">📩 Contact</a>
 </div>
+
+<!-- 🔵 TITRE -->
+<div class="info">
+    <h1>Bienvenue sur Radios Monde</h1>
+</div>
+
 <div>
-    <h3 style="text-align:center;"> Écoutez les stations du monde entier et consultez la méteo 
-    <p>Découvrez des milliers de radios internationales classées par pays, genre et  popularité.</p>
+    <h3 style="text-align:center;">
+        Écoutez les stations du monde entier et consultez la météo
+        <p>Découvrez des milliers de radios internationales classées par pays, genre et popularité.</p>
     </h3>
 </div>
-<script>
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/service-worker.js");
-}
-</script>    
-<!-- 🔵 Boutons -->
-<script>
-const btn = document.getElementById("aboutBtn");      // ID correct
-const modal = document.getElementById("aboutModal");  // ID correct
-const closeBtn = document.querySelector(".close");
 
-btn.onclick = (e) => {
-    e.preventDefault();
-    modal.style.display = "block";
-};
-
-closeBtn.onclick = () => modal.style.display = "none";
-
-window.onclick = (e) => {
-    if (e.target === modal) {
-        modal.style.display = "none";
-    }
-};
-</script>
-
-
-<!-- 🔵 Météo + Carte -->
+<!-- 🔵 MÉTÉO -->
 <div class="weather-map-wrapper">
-    <!-- Colonne météo -->
     <div class="weather-column">
         <div id="weather-local" class="weather-box">
             <div class="weather-loading">Chargement météo locale...</div>
         </div>
         <div id="weather-radio" class="weather-box">
-            <div class="weather-loading">Météo externe(Radio)</div>
+            <div class="weather-loading">Météo externe (Radio)</div>
         </div>
     </div>
 </div>
-    <!-- Carte -->
+
+<!-- 🔵 CARTE -->
 <div class="map-wrapper">
     <div id="map"></div>
 </div>
-<!-- 🔵 Panneau météo détaillé -->
+
+<!-- 🔵 MÉTÉO DÉTAILLÉE -->
 <div id="weather-details" class="weather-details"></div>
+
+<!-- 🔵 CONTROLES -->
 <div class="container">
     <div class="controls">
         <button class="toggle-btn" onclick="toggleCountries()">
             <span>Choisir un pays</span>
             <span class="arrow">▶</span>
         </button>
+
         <div id="country-list" class="country-list hidden"></div>
+
         <label for="genre"><strong>Genre :</strong></label>
         <select id="genre">
             <option value="">Tous les genres</option>
@@ -147,69 +91,78 @@ window.onclick = (e) => {
         </select>
     </div>
 </div>
-<!-- Onglets -->
+
+<!-- 🔵 ONGLET -->
 <div class="tabs">
-    <button class="tab-btn active" data-tab="all"><strong>Radios correspondants au pays</strong></button>
-    <button class="tab-btn" data-tab="fav"><strong>❤️Favoris❤️</strong></button>
+    <button class="tab-btn active" data-tab="all"><strong>Radios du pays</strong></button>
+    <button class="tab-btn" data-tab="fav"><strong>❤️ Favoris ❤️</strong></button>
 </div>
 
-<!-- Loader -->
+<!-- 🔵 LOADER -->
 <div id="loader">
     <div class="loader-spinner"></div>
 </div>
+
+<!-- 🔵 RECHERCHE -->
 <div class="search-box">
     <input type="text" id="search" placeholder="Rechercher une radio...">
     <p class="hint"><strong>Clique sur une radio pour écouter.</strong></p>
 </div>
-<!-- Liste radios -->
+
+<!-- 🔵 LISTE RADIOS -->
 <div id="radios"></div>
-<!--ARABEL-->
+
+<!-- 🔵 ARABEL -->
 <div id="arabelContainer" style="display:none;">
-    <iframe id="arabelFrame"
-        width="100%"
-        height="300"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen>
-    </iframe>
+    <iframe id="arabelFrame" width="100%" height="300" frameborder="0" allow="autoplay; encrypted-media"></iframe>
 </div>
-<!-- Lecteur audio -->
+
+<!-- 🔵 LECTEUR AUDIO -->
 <div id="audio-player">
     <audio id="player" controls></audio>
 </div>
-<!-- MINI‑PLAYER -->
+
+<!-- 🔵 MINI PLAYER -->
 <div id="mini-player">
     <img id="mini-cover" src="">
     <div class="title" id="mini-title"></div>
     <button id="mini-stop">⏹</button>
 </div>
-<!-- Script principal -->
-<script>
-    src="leaflet.edgebuffer.js"
-    const version = Date.now();
-    const s = document.createElement("script");
-    s.src = "script.js?v=" + version; 
-    document.head.appendChild(s);
-</script>   
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>   
+
+<!-- 🔵 MODAL À PROPOS -->
+<div id="aboutModal" class="modal">
+   <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe src="a-propos.html" style="width:100%; height:80vh; border:none;"></iframe>
+   </div>
+</div>
+
+<!-- 🔵 FOOTER -->
+<footer class="blog-footer">
+  <p>© 2026 Radio Monde – Tous droits réservés</p>
+</footer>
+
+<!-- 🔵 LEAFLET -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- 🔵 SERVICE WORKER -->
 <script>
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("/service-worker.js");
 }
-</script> 
-<footer>
-  <a href="index.html" class="btn-retour">← Retour à l’accueil</a>
-</footer>
-<div id="aboutModal" class="modal">
-   <div class="modal-content">
-        <span class="close">&times;</span>
-        <iframe src="a-propos.html"
-            style="width:100%; height:80vh; border:none;">
-       </iframe>
-   </div>
-</div>
-<footer class="blog-footer">
-  <p>© 2026 Radio Monde – Tous droits réservés</p>
-</footer>    
+</script>
+
+<!-- 🔵 MODAL SCRIPT -->
+<script>
+const btn = document.getElementById("aboutBtn");
+const modal = document.getElementById("aboutModal");
+const closeBtn = document.querySelector(".close");
+
+btn.onclick = (e) => { e.preventDefault(); modal.style.display = "block"; };
+closeBtn.onclick = () => modal.style.display = "none";
+window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
+</script>
+
 </body>
 </html>
+
