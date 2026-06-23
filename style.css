@@ -553,5 +553,34 @@ a:hover {
 .btn-top:hover {
   background-color: #005fcc;
 }
+/* fenetre blog*/ 
+.blog-header {
+  text-align: center;
+  padding: 20px;
+}
+
+.blog-list {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+}
+
+.post {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.post img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.post h2 a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
 
 
