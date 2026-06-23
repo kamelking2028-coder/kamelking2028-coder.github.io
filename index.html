@@ -20,26 +20,65 @@
     <!-- 🔵 Bouton À propos -->
 </head>
 <body>  
+<!---Section blog-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog – Radio Monde</title>
 
-<section class="blog-header">
+  <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+<header class="blog-header">
   <h1>📰 Blog Radio Monde</h1>
-  <p>Actualités, nouveautés, météo et découvertes musicales du monde entier.</p>
-</section>
+  <p>Actualités, météo, radios du monde et nouveautés du projet.</p>
+</header>
 
-<section class="blog-list">
+<main class="blog-container">
+
+  <!-- ARTICLE 1 -->
   <article class="post">
-    <img src="images/blog1.jpg" alt="Illustration article">
-    <h2><a href="articles/radios-afrique.html">Les radios d’Afrique à découvrir</a></h2>
-    <p>Un voyage sonore à travers les stations les plus populaires du continent...</p>
+    <img src="images/blog1.jpg" alt="Radios Afrique">
+    <div class="post-content">
+      <h2><a href="articles/radios-afrique.html">Les radios d’Afrique à découvrir</a></h2>
+      <p>Un voyage sonore à travers les stations les plus populaires du continent...</p>
+      <a class="read-more" href="articles/radios-afrique.html">Lire la suite →</a>
+    </div>
   </article>
 
+  <!-- ARTICLE 2 -->
   <article class="post">
-    <img src="images/blog2.jpg" alt="Illustration article">
-    <h2><a href="articles/meteo-bruxelles.html">Météo à Bruxelles : quelles radios écouter selon le temps</a></h2>
-    <p>Pluie, soleil ou vent : voici les radios parfaites selon l’humeur du ciel...</p>
+    <img src="images/blog2.jpg" alt="Météo Bruxelles">
+    <div class="post-content">
+      <h2><a href="articles/meteo-bruxelles.html">Météo à Bruxelles : quelles radios écouter selon le temps</a></h2>
+      <p>Pluie, soleil ou vent : voici les radios parfaites selon l’humeur du ciel...</p>
+      <a class="read-more" href="articles/meteo-bruxelles.html">Lire la suite →</a>
+    </div>
   </article>
-</section>
 
+  <!-- ARTICLE 3 -->
+  <article class="post">
+    <img src="images/blog3.jpg" alt="Nouveautés Radio Monde">
+    <div class="post-content">
+      <h2><a href="articles/nouveautes.html">Nouveautés sur Radio Monde</a></h2>
+      <p>Découvrez les dernières améliorations, stations ajoutées et futures fonctionnalités...</p>
+      <a class="read-more" href="articles/nouveautes.html">Lire la suite →</a>
+    </div>
+  </article>
+
+</main>
+
+<footer class="blog-footer">
+  <p>© 2026 Radio Monde – Tous droits réservés</p>
+</footer>
+
+</body>
+</html>
+
+
+  
     
 <div class="top-left">
   <a id="aboutBtn" class="btn-top" href="#">ℹ️ À propos</a>
