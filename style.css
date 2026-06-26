@@ -488,6 +488,24 @@ body {
 .modal-content p {
     color: #000;
 }
+@media (max-width: 480px) {
+  .top-left, .top-right, .info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px; /* espace entre les boutons */
+  }
+
+  .top-left button, .top-right button, .info button {
+    width: 90%; /* chaque bouton prend presque toute la largeur */
+    margin: 4px 0;
+  }
+
+  h1, h3 {
+    font-size: 1.1em;
+    text-align: center;
+  }
+}
 
 
 /* Responsive */
