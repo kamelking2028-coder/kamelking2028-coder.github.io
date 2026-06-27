@@ -49,11 +49,11 @@ header svg {
 
 .top-left { left: 10px; }
 .top-right { right: 10px; }
-
+/* Bouton Contact*/
 .btn-top {
     position: fixed;
-    top: 10%;
-    left:270px;
+    top: 1%;
+    left:5px;
     background:#d7eaff;
     color: #0078ff;
     padding: 8px 12px;
