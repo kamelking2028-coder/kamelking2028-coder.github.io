@@ -128,10 +128,12 @@ body {
     }
     /* Positionne le bouton Blog à droite de la météo */
     .btn-blog {
-        position: absolute;
-        right: 4%;
-        top: 42%; /* ajuste la hauteur selon ta météo */
+        position: fixed;
+        right: 64%;
+        top: 15%; /* ajuste la hauteur selon ta météo */
         z-index: 9999;
+        width: 9%;
+        height: 10vh;
     }
     #aboutBtn {
         background:#d7eaff;
