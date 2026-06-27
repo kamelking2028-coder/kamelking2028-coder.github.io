@@ -41,27 +41,29 @@ header svg {
 }
 
 /* 🔵 Boutons en haut */
-.top-left, .top-right {
+.top-buttons {
     position: absolute;
     top: 10px;
+    right: 10px;
+
+    display: flex;
+    flex-direction: column; /* empile verticalement */
+    gap: 8px;               /* espace entre les boutons */
     z-index: 9999;
 }
 
-.top-left { left: 10px; }
-.top-right { right: 10px; }
-/* Bouton Contact*/
+
 .btn-top {
-    position: fixed;
-    top: 1%;
-    left:5px;
     background:#d7eaff;
     color: #0078ff;
     padding: 8px 12px;
     border-radius: 8px;
     border: 1px solid var(--border);
     cursor: pointer;
-    display: inline-block;
     transition: 0.2s;
+    display: block;         /* important pour l’empilement */
+    width: 120px;           /* largeur fixe propre */
+    text-align: center;
 }
 
 .btn-top:hover {
