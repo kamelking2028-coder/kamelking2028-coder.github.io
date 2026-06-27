@@ -114,8 +114,9 @@ body {
         width: 99%;
         height: 30vh; /* la carte prend 60% de la hauteur de l'écran */
     }
-    /* 🔵 Boutons en haut */
+    /* 🔵 Bouton Contact */
 .top-buttons {
+    width:90px;
     position: absolute;
     top: 350px;
     right: 0px;
