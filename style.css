@@ -114,6 +114,16 @@ body {
         width: 99%;
         height: 30vh; /* la carte prend 60% de la hauteur de l'écran */
     }
+    /* 🔵 Boutons en haut */
+.top-buttons {
+    position: absolute;
+    top: 350px;
+    right: 0px;
+    display: flex;
+    flex-direction: column; /* empile verticalement */
+    gap: 8px;               /* espace entre les boutons */
+    z-index: 9999;
+}
     #weather-local {
         align-self: center;
          display flex;
