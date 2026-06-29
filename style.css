@@ -635,3 +635,39 @@ body {
   background: #222;
   color: white;
 }
+.calendar {
+  text-align: center;
+}
+
+#calendar-box {
+  display: inline-block;
+  padding: 20px 30px;
+  background: #1f2937;
+  border-radius: 12px;
+  border: 1px solid #374151;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  animation: pop 0.6s ease-in-out;
+}
+
+#calendar-day {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #60a5fa;
+}
+
+#calendar-month {
+  font-size: 1.4rem;
+  margin-top: 5px;
+  color: #93c5fd;
+}
+
+#calendar-year {
+  font-size: 1rem;
+  margin-top: 3px;
+  color: #d1d5db;
+}
+
+@keyframes pop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
