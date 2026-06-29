@@ -148,9 +148,22 @@
     </section>
 
     <!-- Article principal -->
-    <section class="post">
-      <h2>Bienvenue sur le blog Radio Monde, créé par MHALLA Kamel</h2>
-      <time datetime="2026-06-27">27 juin 2026</time>
+   <section class="post">
+       <h2>Bienvenue sur le blog Radio Monde, créé par MHALLA Kamel</h2>
+       <time id="date-du-jour"></time>
+       <p>
+          Ce blog accompagne le projet Radio Monde : une carte interactive des radios du monde,
+          pensée pour rester simple, légale et agréable à utiliser.
+       </p>
+    </section>
+     <script>
+         const options = { day: 'numeric', month: 'long', year: 'numeric' };
+         const aujourdHui = new Date().toLocaleDateString('fr-FR', options);
+         document.getElementById('date-du-jour').textContent = aujourdHui;
+         document.getElementById('date-du-jour').setAttribute('datetime', new Date().toISOString().split('T')[0]);
+      </script>
+
+      <!---<time datetime="2026-06-27">27 juin 2026</time>-->
       <p>
         Ce blog accompagne le projet Radio Monde : une carte interactive des radios du monde,
         pensée pour rester simple, légale et agréable à utiliser.
