@@ -1,4 +1,4 @@
 User-agent: *
-Allow: kamelking2028-coder.github.io/ads.txt
+Allow: /
 
 Sitemap: https://kamelking2028-coder.github.io/sitemap.xml
