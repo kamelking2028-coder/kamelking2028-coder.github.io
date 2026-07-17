@@ -3,6 +3,7 @@ const CACHE_NAME = "radio-map-v3";
 // Fichiers essentiels à mettre en cache
 const CORE_ASSETS = [
   "/",
+  "/sw.js",
   "/index.html",
   "/style.css",
   "/script.js",
