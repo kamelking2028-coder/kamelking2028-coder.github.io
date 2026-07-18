@@ -206,8 +206,8 @@ body {
         right: 64%;
         top: 15%; 
         z-index: 9999;
-        width: 90%;
-        height: 10vh;
+        width: 9%;
+        height: 5vh;
     }
     .country-list {
         max-height: 300px;
