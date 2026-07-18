@@ -147,7 +147,7 @@ body {
         height: 5vh;
     }
     .btn-top {
-         top: 15%;
+         top: 20%;
          background: #d7eaff;
          color: #0078ff;
          padding: 8px 12px;
@@ -156,7 +156,7 @@ body {
          cursor: pointer;
          transition: 0.2s;
          display: block;
-         width: 120px;
+         width: 9%;
          text-align: center;
     }
     #aboutBtn {
