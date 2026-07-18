@@ -145,12 +145,19 @@ body {
         z-index: 9999;
         width: 9%;
         height: 5vh;
-    }
-
+    }    
     .btn-top {
+      background: #d7eaff;
+       color: #0078ff;
+       padding: 8px 12px;
+       cursor: pointer;
+       transition: 0.2s;
+       display: block;
+       width: 120px;
+       text-align: center;
         position: fixed;
         top: 17%;
-        width: 80%;
+        width: 9%;
         text-align: center;
     }
 
