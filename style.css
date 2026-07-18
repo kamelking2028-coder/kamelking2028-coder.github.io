@@ -146,18 +146,14 @@ body {
         width: 9%;
         height: 5vh;
     }
+
     .btn-top {
-        background:#d7eaff;
-        color: #0078ff;
-        padding: 8px 12px;
-        border-radius: 8px;
-        border: 1px solid var(--border);
-        cursor: pointer;
-        transition: 0.2s;
-        display: block;         /* important pour l’empilement */
-        width: 120px;           /* largeur fixe propre */
+        position: fixed;
+        top: 17%;
+        width: 80%;
         text-align: center;
-   }
+    }
+
     #aboutBtn {
         background:;
         position:fixed;
