@@ -147,17 +147,10 @@ body {
         height: 5vh;
     }
     .btn-top {
-         top: 20%;
-         background: #d7eaff;
-         color: #0078ff;
-         padding: 8px 12px;
-         border-radius: 8px;
-         border: 1px solid var(--border);
-         cursor: pointer;
-         transition: 0.2s;
-         display: block;
-         width: 9%;
-         text-align: center;
+        position: relative; /* évite le top: */
+        top: 20%; /* supprime le décalage vertical forcé */
+        width: 80%; /* largeur adaptée au mobile */
+        text-align: center;
     }
     #aboutBtn {
         background:;
