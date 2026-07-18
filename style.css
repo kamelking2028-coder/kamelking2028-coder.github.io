@@ -216,6 +216,13 @@ body {
     text-align: center;
   }
 }
+.monetag-btn {
+        background:#d7eaff;
+        position:fixed;
+        top: 25%;
+        left: 1%;  
+        width: 9%;       
+    }
 
            /*** ICI la fin de la version GSM ****/
 .weather-column {
