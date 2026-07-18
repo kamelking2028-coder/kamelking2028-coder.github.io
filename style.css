@@ -210,19 +210,15 @@ body {
   .top-right button {
     width: 90%;
   }
-
   .monetag-btn {
-    width: 90%;
-    text-align: center;
-  }
-
-.monetag-btn {
+        width: 90%;
+        text-align: center;
         background:#d7eaff;
         position:fixed;
         top: 25%;
         left: 1%;  
         width: 9%;       
-    }
+   }
 }
                       /*** ICI la fin de la version GSM ****/
 .weather-column {
