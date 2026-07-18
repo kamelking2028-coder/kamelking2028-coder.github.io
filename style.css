@@ -144,7 +144,20 @@ body {
         top: 15%; /* ajuste la hauteur selon ta météo */
         z-index: 9999;
         width: 9%;
-        height: 10vh;
+        height: 5vh;
+    }
+    .btn-top {
+         top: 15%;
+         background: #d7eaff;
+         color: #0078ff;
+         padding: 8px 12px;
+         border-radius: 8px;
+         border: 1px solid var(--border);
+         cursor: pointer;
+         transition: 0.2s;
+         display: block;
+         width: 120px;
+         text-align: center;
     }
     #aboutBtn {
         background:;
