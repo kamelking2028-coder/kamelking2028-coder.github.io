@@ -108,7 +108,7 @@ body {
 
                              /**** Version mobile ****/
 
-@media (max-width: 667px) {
+@media (max-width: 625px) {
     
     #map {
         width: 99%;
@@ -197,9 +197,18 @@ body {
         border-radius: 12px;
         margin-top: 10px;
     }
+    .monetag-btn {
+        width: 90%;
+        text-align: center;
+        background:#d7eaff;
+        position:fixed;
+        top: 25%;
+        left: 1%;  
+        width: 9%;       
+   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 625px) {
   .top-right {
     display: flex;
     flex-direction: column;
@@ -210,15 +219,6 @@ body {
   .top-right button {
     width: 90%;
   }
-  .monetag-btn {
-        width: 90%;
-        text-align: center;
-        background:#d7eaff;
-        position:fixed;
-        top: 25%;
-        left: 1%;  
-        width: 9%;       
-   }
 }
                       /*** ICI la fin de la version GSM ****/
 .weather-column {
