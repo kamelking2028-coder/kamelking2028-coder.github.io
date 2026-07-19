@@ -109,6 +109,22 @@ body {
                              /**** Version mobile ****/
 
 @media (max-width: 625px) {
+  .top-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 colonnes */
+    gap: 10px; /* espace entre les boutons */
+    width: 100%;
+    padding: 10px;
+  }
+
+  .btn-top,
+  .monetag-btn {
+    width: 100%; /* chaque bouton occupe sa colonne */
+    text-align: center;
+  }
+}
+
+@media (max-width: 625px) {
     
     #map {
         width: 99%;
