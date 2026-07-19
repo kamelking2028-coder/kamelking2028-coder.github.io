@@ -108,7 +108,7 @@ body {
 
                              /**** Version mobile ****/
 
-@media (max-width: 410px) {
+@media (max-width: 625px) {
     
     #map {
         width: 99%;
@@ -231,7 +231,7 @@ body {
    }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 625px) {
   .top-right {
     display: flex;
     flex-direction: column;
@@ -561,7 +561,7 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 625px) {
     .weather-map-wrapper {
         flex-direction: column;
     }
