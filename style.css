@@ -115,16 +115,16 @@ body {
         height: 30vh; /* la carte prend 60% de la hauteur de l'écran */
     }
     /* 🔵 Bouton Contact */
-.top-buttons {
-    width: 90px;
-    position: absolute;
-    top: 350px;
-    right: 4%;
-    display: flex;
-    flex-direction: column; /* empile verticalement */
-    gap: 8px;               /* espace entre les boutons */
-    z-index: 9999;
-}
+   .top-buttons {
+       width: 90px;
+       position: absolute;
+       top: 350px;
+       right: 4%;
+       display: flex;
+       flex-direction: column; /* empile verticalement */
+       gap: 8px;               /* espace entre les boutons */
+       z-index: 9999;
+    }
     #weather-local {
         align-self: center;
          display flex;
