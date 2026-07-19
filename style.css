@@ -108,7 +108,7 @@ body {
 
                              /**** Version mobile ****/
 
-@media (max-width: 625px) {
+@media (max-width: 410px) {
     
     #map {
         width: 99%;
@@ -231,7 +231,7 @@ body {
    }
 }
 
-@media (max-width: 625px) {
+@media (max-width: 410px) {
   .top-right {
     display: flex;
     flex-direction: column;
