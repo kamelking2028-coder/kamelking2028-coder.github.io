@@ -461,7 +461,7 @@ function renderRadios() {
         card.onclick = async () => {
             if (radio.stationuuid === "arabel-manuel") {
                 const frame = document.getElementById("arabelFrame");
-                frame.src = "https://www.youtube.com/embed/live_stream?channel=UC7wz0pQfM9vDOMkMt2rt7xA&autoplay=1";
+                frame.src = "https://arabelfm.ice.infomaniak.ch/arabelprodcastfm.mp3";
                 document.getElementById("arabelContainer").style.display = "block";
                 return;
             }
