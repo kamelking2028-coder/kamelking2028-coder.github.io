@@ -402,7 +402,7 @@ async function fetchRadios(codePays) {
                 });
             }
     // Ajout manuel Bassatine
-            if (codePays === "tn") {
+            if (codePays === "TN") {
                 allRadiosCache.push({
                     name: "bassatine",
                     url: "bassatine",
