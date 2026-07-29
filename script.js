@@ -401,7 +401,7 @@ async function fetchRadios(codePays) {
                     stationuuid: "arabel-manuel"
                 });
             }
-
+     
             // 👉 C’est ici que renderRadios() doit être appelé
             renderRadios();
         })
