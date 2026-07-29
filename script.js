@@ -479,7 +479,7 @@ function renderRadios() {
                 document.getElementById("arabelContainer").style.display = "block";
                 return;
             }
-     
+      
             if (radio.stationuuid === "bassatine-manuel") {
                 const frame = document.getElementById("bassatineFrame");
                 frame.src = "https://www.radioquran.tn/player"; 
