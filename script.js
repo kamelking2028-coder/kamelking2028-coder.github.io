@@ -402,12 +402,12 @@ async function fetchRadios(codePays) {
                 });
             }
     // Ajout manuel Bassatine
-            if (codePays === "BE") {
+            if (codePays === "tn") {
                 allRadiosCache.push({
                     name: "bassatine",
                     url: "bassatine",
                     favicon: "icons/Logo-bassatine.png",
-                    countrycode: "TN",
+                    countrycode: "tn",
                     geo_lat: 50.8503,
                     geo_long: 4.3517,
                     tags: "arabic,community",
@@ -479,14 +479,14 @@ function renderRadios() {
                 document.getElementById("arabelContainer").style.display = "block";
                 return;
             }
-       card.onclick = async () => {
+     
             if (radio.stationuuid === "bassatine-manuel") {
                 const frame = document.getElementById("bassatineFrame");
                 frame.src = "https://www.radioquran.tn/player"; 
                 document.getElementById("bassatineContainer").style.display = "block";
             return;
             }
-        }
+        
             if (radio.externalLink) {
                 window.open(radio.externalLink, "_blank");
                 return;
