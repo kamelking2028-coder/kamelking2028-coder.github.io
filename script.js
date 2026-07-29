@@ -406,10 +406,10 @@ async function fetchRadios(codePays) {
                 allRadiosCache.push({
                     name: "bassatine",
                     url: "bassatine",
-                    favicon: "icons/Logo-bassatine.png",
+                    favicon: "icons/bassatine.png",
                     countrycode: "tn",
-                    geo_lat: 50.8503,
-                    geo_long: 4.3517,
+                    geo_lat: 35.7779,
+                    geo_long: 10.8261,
                     tags: "arabic,community",
                     stationuuid: "bassatine-manuel"
                 });
