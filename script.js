@@ -484,7 +484,7 @@ function renderRadios() {
                 const frame = document.getElementById("bassatineFrame");
                 frame.src = "https://www.radioquran.tn/?utm_source=tuninga"; 
                 document.getElementById("bassatineContainer").style.display = "block";
-            return;
+                return;
             }
         
             if (radio.externalLink) {
