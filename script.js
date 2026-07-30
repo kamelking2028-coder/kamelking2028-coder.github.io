@@ -472,25 +472,26 @@ function renderRadios() {
             fav.textContent = isFavori(radio.stationuuid) ? "❤️" :"💛";
         };
         
-        card.onclick = async () => {
+       card.onclick = async () => {
             if (radio.stationuuid === "arabel-manuel") {
                 const frame = document.getElementById("arabelFrame");
                 frame.src = "https://arabelfm.ice.infomaniak.ch/arabelprodcastfm.mp3";
                 document.getElementById("arabelContainer").style.display = "block";
                 return;
             }
-      
+        }  
+        card.onclick = async () => {
             if (radio.stationuuid === "bassatine-manuel") {
                 const frame = document.getElementById("bassatineFrame");
                 frame.src = "https://www.radioquran.tn/?utm_source=tuninga/player";
                 document.getElementById("bassatineContainer").style.display = "block";
                 return;
-            }
-        
-            if (radio.externalLink) {
+             }
+         }
+             if (radio.externalLink) {
                 window.open(radio.externalLink, "_blank");
                 return;
-            }
+             }
 
             const url = radio.url_resolved || radio.url;
             if (!url) return;
