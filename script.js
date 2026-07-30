@@ -484,11 +484,10 @@ function renderRadios() {
 
     // Bassatine
     if (radio.stationuuid === "bassatine-manuel") {
-        const frame = document.getElementById("bassatineFrame");
-        frame.src = "http://www.tunisie-radio.com/player/17951";
-        document.getElementById("bassatineContainer").style.display = "block";
-        return;
+    window.open("https://www.radioquran.tn/?utm_source=tuninga/player/", "_blank");
+    return;
     }
+
 
     // Lien externe
     if (radio.externalLink) {
