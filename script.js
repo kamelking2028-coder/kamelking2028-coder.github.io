@@ -482,7 +482,7 @@ function renderRadios() {
       
             if (radio.stationuuid === "bassatine-manuel") {
                 const frame = document.getElementById("bassatineFrame");
-                frame.src = "http://www.tunisie-radio.com/player/17951";
+                frame.src = "https://www.radioquran.tn/?utm_source=tuninga";
                 document.getElementById("bassatineContainer").style.display = "block";
                 return;
             }
