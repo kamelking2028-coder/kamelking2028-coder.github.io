@@ -472,27 +472,63 @@ function renderRadios() {
             fav.textContent = isFavori(radio.stationuuid) ? "❤️" :"💛";
         };
         
-       card.onclick = async () => {
-            if (radio.stationuuid === "arabel-manuel") {
-                const frame = document.getElementById("arabelFrame");
-                frame.src = "https://arabelfm.ice.infomaniak.ch/arabelprodcastfm.mp3";
-                document.getElementById("arabelContainer").style.display = "block";
-                return;
-            }
-        }  
         card.onclick = async () => {
-            if (radio.stationuuid === "bassatine-manuel") {
-                const frame = document.getElementById("bassatineFrame");
-                frame.src = "https://www.radioquran.tn/?utm_source=tuninga/player";
-                document.getElementById("bassatineContainer").style.display = "block";
-                return;
-             }
-         }
-             if (radio.externalLink) {
-                window.open(radio.externalLink, "_blank");
-                return;
-             }
 
+       // Arabel
+    if (radio.stationuuid === "arabel-manuel") {
+        const frame = document.getElementById("arabelFrame");
+        frame.src = "https://arabelfm.ice.infomaniak.ch/arabelprodcastfm.mp3";
+        document.getElementById("arabelContainer").style.display = "block";
+        return;
+    }
+
+    // Bassatine
+    if (radio.stationuuid === "bassatine-manuel") {
+        const frame = document.getElementById("bassatineFrame");
+        frame.src = "https://www.radioquran.tn/?utm_source=tuninga/player";
+        document.getElementById("bassatineContainer").style.display = "block";
+        return;
+    }
+
+    // Lien externe
+    if (radio.externalLink) {
+        window.open(radio.externalLink, "_blank");
+        return;
+    }
+
+    // Lecture normale
+    const url = radio.url_resolved || radio.url;
+    if (!url) return;
+
+    player.src = url;
+    player.play();
+
+    miniTitle.textContent = radio.name;
+    miniCover.src = radio.favicon || "https://cdn-icons-png.flaticon.com/128/4214/4214997.png";
+    miniPlayer.style.display = "flex";
+
+    if (radio.geo_lat && radio.geo_long) {
+        if (marker) marker.remove();
+        marker = L.marker([radio.geo_lat, radio.geo_long], { icon: getFlagIcon(radio.countrycode) }).addTo(map);
+        map.setView([radio.geo_lat, radio.geo_long], 12);
+        updateRadioWeather(radio.geo_lat, radio.geo_long);
+        afficherInfosRadio(radio);
+        return;
+    }
+
+    const city = radio.city || radio.state || radio.name;
+    const coords = await geocodeLocation(city, radio.countrycode);
+
+    if (!coords) return;
+
+    if (marker) marker.remove();
+    marker = L.marker([coords.lat, coords.lon], { icon: getFlagIcon(radio.countrycode) }).addTo(map);
+    map.setView([coords.lat, coords.lon], 12);
+    updateRadioWeather(coords.lat, coords.lon);
+    afficherInfosRadio(radio);
+};
+
+           
             const url = radio.url_resolved || radio.url;
             if (!url) return;
 
@@ -503,27 +539,7 @@ function renderRadios() {
             miniCover.src = radio.favicon || "https://cdn-icons-png.flaticon.com/128/4214/4214997.png";
             miniPlayer.style.display = "flex";
 
-            if (radio.geo_lat && radio.geo_long) {
-                if (marker) marker.remove();
-                marker = L.marker([radio.geo_lat, radio.geo_long], { icon: getFlagIcon(radio.countrycode) }).addTo(map);
-                map.setView([radio.geo_lat, radio.geo_long], 12);
-                updateRadioWeather(radio.geo_lat, radio.geo_long);
-                afficherInfosRadio(radio); // ← AJOUT ICI
-                return;
-            }
-
-            const city = radio.city || radio.state || radio.name;
-            const coords = await geocodeLocation(city, radio.countrycode);
-
-            if (!coords) return;
-            
-            if (marker) marker.remove();
-            marker = L.marker([coords.lat, coords.lon], { icon: getFlagIcon(radio.countrycode) }).addTo(map);
-            map.setView([coords.lat, coords.lon], 12);
-            updateRadioWeather(coords.lat, coords.lon);
-            afficherInfosRadio(radio); // ← AJOUT ICI AUSSI
-        };
-
+       
         card.appendChild(img);
         card.appendChild(name);
         card.appendChild(genre);
