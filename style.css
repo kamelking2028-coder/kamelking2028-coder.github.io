@@ -122,19 +122,10 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   transition: background-color 0.3s ease;
 }
-.controls {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
 .toggle-btn:hover {
   background-color: #2b2b45;
 }
-
-
-
-                             /**** Version mobile ****/
+                            /**** Version mobile ****/
 
 @media (max-width: 625px) {
 
