@@ -388,17 +388,19 @@ async function fetchRadios(codePays) {
 
             allRadiosCache = radios;
      // Ajout Coordonnées geo. Monastir
-            if (codePays === "TN") {
-                allRadiosCache.push({
-                    name: "Radio Monastir",
-                    url: "Radio Monastir",
-                    countrycode: "TN",
-                    geo_lat:35.7779,
-                    geo_long:10.8261,
-                    tags: "arabic,community",
-                    stationuuid: "Monastir-manuel"
-                });
-            }      
+             if (codePays === "TN") {
+                 allRadiosCache.push({
+                     name: "Radio Monastir",
+                     url: "monastir",
+                     favicon: "icons/monastir.png",
+                     countrycode: "TN",
+                     geo_lat: 35.7779,
+                     geo_long: 10.8261,
+                     tags: "arabic,community",
+                     stationuuid: "Monastir-manuel"
+                  });
+             }
+
 
      // Ajout manuel Arabel
             if (codePays === "BE") {
