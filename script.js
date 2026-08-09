@@ -385,8 +385,22 @@ async function fetchRadios(codePays) {
                 radiosList.innerHTML = "<p>Aucune radio trouvée pour ce pays.</p>";
                 return;
             }
-
             allRadiosCache = radios;
+     
+          // Ajout donnée Geo. Monastir 
+          if (codePays === "TN") {
+              allRadiosCache.push({
+                 name: "Test Monastir",
+                 url: "test-monastir",
+                 favicon: "icons/test.png",
+                 countrycode: "TN",
+                 geo_lat: 35.7779,
+                 geo_long: 10.8261,
+                 tags: "test,monastir",
+                 stationuuid: "monastir-test"
+               });
+          }
+ 
      // Ajout manuel Arabel
             if (codePays === "BE") {
                 allRadiosCache.push({
