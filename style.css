@@ -188,9 +188,7 @@ body {
 }
 
                       /*** ICI la fin de la version GSM ****/
-* {
-  outline: 1px solid red;
-}
+
 
 .weather-column {
     display: flex;
