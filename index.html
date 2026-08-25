@@ -36,12 +36,13 @@
             data-zone="11327421"></script>
 </head>
 <body> 
-     <script>
-       if ("serviceWorker" in navigator) {
-           navigator.serviceWorker.register("/radio-monde/sw.js")
-          .catch(err => console.error("SW error:", err));
+  
+ <script>
+    if ("serviceWorker" in navigator) {
+         navigator.serviceWorker.register("/radio-monde/sw.js");
+         navigator.serviceWorker.register("/radio-monde/monetag-sw.js");
        }
-     </script>
+ </script>
 
  
       <!-- Bouton Partager sur Facebook -->
