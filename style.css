@@ -663,17 +663,6 @@ body {
   to { transform: scale(1); opacity: 1; }
 }
 
-.monetag-btn {
-  display: inline-block;
-  padding: 10px 16px;
-  background-color: #00bfff;
-  color: #d7eaff;
-  font-weight: bold;
-  border-radius: 6px;
-  text-decoration: none;
-  margin-top: 8px;
-  transition: 0.3s;
-}
 /* repositionner les pubs Monetag à gauche */
 div[id^="monetag"] {
   right: auto !important;
