@@ -56,13 +56,13 @@ header svg {
 .btn-top {
     background:#d7eaff;
     color: #0078ff;
-    padding: 8px 12px;
+    padding: 10px 12px;
     border-radius: 8px;
     border: 1px solid var(--border);
     cursor: pointer;
     transition: 0.2s;
     display: block;         /* important pour l’empilement */
-    width: 120px;           /* largeur fixe propre */
+    width: 180px;           /* largeur fixe propre */
     text-align: center;
 }
 
@@ -144,8 +144,8 @@ body {
   .monetag-btn {
     width: 100%;
     text-align: center;
-    padding: 10px 12px;
-    border-radius: 8px;
+    padding: 20px 12px;
+    border-radius: 10px;
     font-weight: bold;
   }
 
