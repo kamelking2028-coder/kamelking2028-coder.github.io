@@ -1,4 +1,7 @@
- <head>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radios Monde By‑KML</title>
@@ -6,7 +9,7 @@
     <!-- Facebook App ID -->
     <meta property="fb:app_id" content="1433349121966993" />
 
-    <!-- Open Graph (corrigé) -->
+    <!-- Open Graph -->
     <meta property="og:url" content="https://kamelking2028-coder.github.io/radio-monde/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Radios Monde By‑KML" />
@@ -14,7 +17,7 @@
     <meta property="og:image" content="https://kamelking2028-coder.github.io/icons/icon-512.png" />
     <meta property="og:locale" content="fr_FR" />
 
-    <!-- Canonical (corrigé) -->
+    <!-- Canonical -->
     <link rel="canonical" href="https://kamelking2028-coder.github.io/radio-monde/">
 
     <!-- PWA -->
@@ -29,23 +32,25 @@
     <script defer src="script.js?v=3"></script>
 </head>
 
- <script>
-    if ("serviceWorker" in navigator) {
-         navigator.serviceWorker.register("/radio-monde/sw.js");
-         navigator.serviceWorker.register("/radio-monde/monetag-sw.js");
-       }
+<body>
 
- </script> 
-      <!-- Bouton Partager sur Facebook -->
-     <div style="text-align:center; margin-top:30px;">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://kamelking2028-coder.github.io/"
-           target="_blank"
-           style="display:inline-block; background:#1877F2; color:white; padding:12px 20px; border-radius:8px; text-decoration:none; font-weight:bold;">
-           📢 Partager sur Facebook👇
-        </a>
-      </div>
-   
-        <!--Calendrier -->
+<!-- Service Worker (correct) -->
+<script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/radio-monde/sw.js");
+}
+</script>
+
+<!-- Bouton Partager -->
+<div style="text-align:center; margin-top:30px;">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://kamelking2028-coder.github.io/"
+       target="_blank"
+       style="display:inline-block; background:#1877F2; color:white; padding:12px 20px; border-radius:8px; text-decoration:none; font-weight:bold;">
+       📢 Partager sur Facebook👇
+    </a>
+</div>
+
+<!-- Calendrier -->
 <section class="post calendar">
   <h2>📅 Calendrier du jour</h2>
   <div id="calendar-box">
@@ -53,10 +58,10 @@
     <div id="calendar-month"></div>
     <div id="calendar-year"></div>
   </div>
-</section>    
+</section>
+
 <script>
   const date = new Date();
-
   const optionsMonth = { month: 'long' };
   const day = date.getDate();
   const month = date.toLocaleDateString('fr-FR', optionsMonth);
@@ -66,7 +71,8 @@
   document.getElementById('calendar-month').textContent = month.charAt(0).toUpperCase() + month.slice(1);
   document.getElementById('calendar-year').textContent = year;
 </script>
-    <!-- 🔵 Les 4 boutons en haut: contatc, à propos, blog, Spécial--->
+
+<!-- Boutons -->
 <div class="top-buttons">
   <button class="btn-top" onclick="window.open('a-propos.html','_blank')">ℹ️ À propos</button>
   <button class="btn-top" onclick="window.open('blog.html','_blank')">📰 Blog</button>
@@ -75,16 +81,12 @@
     🌍 CAMS-Live
   </button>
 
-  <!-- Bouton Monetag Special --->
-  <script>(function(s){s.dataset.zone='11661778',s.src='https://al5sm.com/tag.min.js'})([document.documentElement,
-              document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
- 
   <button class="monetag-btn" onclick="window.open('https://omg10.com/4/11339659','_blank')">
     🎁 Special
   </button>
 </div>
 
-<!-- 🔵 TITRE -->
+<!-- TITRE -->
 <div class="info">
     <h1>Bienvenue sur Radios Monde By KML MHALLA</h1>
 </div>
@@ -96,7 +98,7 @@
     </h3>
 </div>
 
-<!-- 🔵 MÉTÉO -->
+<!-- MÉTÉO -->
 <div class="weather-map-wrapper">
     <div class="weather-column">
         <div id="weather-local" class="weather-box">
@@ -108,15 +110,15 @@
     </div>
 </div>
 
-<!-- 🔵 CARTE -->
+<!-- CARTE -->
 <div class="map-wrapper">
     <div id="map"></div>
 </div>
 
-<!-- 🔵 MÉTÉO DÉTAILLÉE -->
+<!-- MÉTÉO DÉTAILLÉE -->
 <div id="weather-details" class="weather-details"></div>
 
-<!-- 🔵 CONTROLES -->
+<!-- CONTROLES -->
 <div class="container">
     <div class="controls">
         <button class="toggle-btn" onclick="toggleCountries()">
@@ -138,46 +140,48 @@
     </div>
 </div>
 
-<!-- 🔵 ONGLET -->
+<!-- ONGLET -->
 <div class="tabs">
     <button class="tab-btn active" data-tab="all"><strong>Radios du pays</strong></button>
     <button class="tab-btn" data-tab="fav"><strong>❤️ Favoris ❤️</strong></button>
 </div>
 
-<!-- 🔵 LOADER -->
+<!-- LOADER -->
 <div id="loader">
     <div class="loader-spinner"></div>
 </div>
 
-<!-- 🔵 RECHERCHE -->
+<!-- RECHERCHE -->
 <div class="search-box">
     <input type="text" id="search" placeholder="Rechercher une radio...">
     <p class="hint"><strong>Clique sur une radio pour écouter.</strong></p>
 </div>
 
-<!-- 🔵 LISTE RADIOS -->
+<!-- LISTE RADIOS -->
 <div id="radios"></div>
 
-<!-- 🔵 ARABEL -->
+<!-- ARABEL -->
 <div id="arabelContainer" style="display:none;">
     <iframe id="arabelFrame" width="100%" height="300" frameborder="0" allow="autoplay; encrypted-media"></iframe>
 </div>
+
 <div id="bassatineContainer" style="display:none;">    
      <iframe id="bassatineFrame" width="100%" height="120" frameborder="0" allow="autoplay"></iframe>
 </div>
-<!-- 🔵 LECTEUR AUDIO -->
+
+<!-- LECTEUR AUDIO -->
 <div id="audio-player">
     <audio id="player" controls></audio>
 </div>
 
-<!-- 🔵 MINI PLAYER -->
+<!-- MINI PLAYER -->
 <div id="mini-player">
     <img id="mini-cover" src="">
     <div class="title" id="mini-title"></div>
     <button id="mini-stop">⏹</button>
 </div>
 
-<!-- 🔵 MODAL À PROPOS -->
+<!-- MODAL À PROPOS -->
 <div id="aboutModal" class="modal">
    <div class="modal-content">
         <span class="close">&times;</span>
@@ -185,22 +189,15 @@
    </div>
 </div>
 
-<!-- 🔵 FOOTER -->
+<!-- FOOTER -->
 <footer class="blog-footer">
   <p>© 2026 Radio Monde – Tous droits réservés</p>
 </footer>
 
-<!-- 🔵 LEAFLET -->
+<!-- LEAFLET -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-<!-- 🔵 SERVICE WORKER -->
-<script>
-if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("/service-worker.js");
-}
-</script>
-
-<!-- 🔵 MODAL SCRIPT -->
+<!-- MODAL SCRIPT -->
 <script>
 const btn = document.getElementById("aboutBtn");
 const modal = document.getElementById("aboutModal");
@@ -209,6 +206,30 @@ const closeBtn = document.querySelector(".close");
 btn.onclick = (e) => { e.preventDefault(); modal.style.display = "block"; };
 closeBtn.onclick = () => modal.style.display = "none";
 window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
+</script>
+
+<!-- 🔥 MONETAG — PLACEMENT OPTIMISÉ CPM -->
+<!-- Zone 268420 -->
+<script src="https://quge5.com/88/tag.min.js"
+        data-zone="268420"
+        async
+        data-cfasync="false"></script>
+
+<!-- Zone 11327421 -->
+<script async
+        data-cfasync="false"
+        src="https://3nbf4.com/act/tag.min.js"
+        data-zone="11327421"></script>
+
+<!-- Zone 11661778 -->
+<script>
+(function(s){
+    s.dataset.zone='11661778';
+    s.src='https://al5sm.com/tag.min.js';
+})([document.documentElement, document.body]
+    .filter(Boolean)
+    .pop()
+    .appendChild(document.createElement('script')));
 </script>
 
 </body>
