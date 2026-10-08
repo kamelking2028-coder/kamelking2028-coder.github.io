@@ -1,4 +1,3 @@
-
 :root {
     --bg: #050816;
     --card-bg: #0b1020;
@@ -20,7 +19,6 @@ body {
     color: var(--text);
     min-height: 100vh;
 }
-
 
 /* Header */
 header {
@@ -45,24 +43,22 @@ header svg {
     position: absolute;
     top: 10px;
     right: 10px;
-
     display: flex;
-    flex-direction: column; /* empile verticalement */
-    gap: 8px;               /* espace entre les boutons */
+    flex-direction: column;
+    gap: 8px;
     z-index: 9999;
 }
 
-
 .btn-top {
-    background:#d7eaff;
+    background: #d7eaff;
     color: #0078ff;
     padding: 10px 12px;
     border-radius: 8px;
     border: 1px solid var(--border);
     cursor: pointer;
     transition: 0.2s;
-    display: block;         /* important pour l’empilement */
-    width: 180px;           /* largeur fixe propre */
+    display: block;
+    width: 180px;
     text-align: center;
 }
 
@@ -70,6 +66,7 @@ header svg {
     background: var(--accent);
     color: #000;
 }
+
 /* Weather + Map layout */
 .weather-map-wrapper {
     display: flex;
@@ -80,10 +77,11 @@ header svg {
     margin: 0 auto;
     padding: 0 16px;
 }
+
 .weather-details {
-    max-width: 340px;   /* limite la largeur sur GSM */
-    width: 90%;         /* s’adapte mais reste raisonnable */
-    margin: 0 auto;     /* centre la fenêtre */
+    max-width: 340px;
+    width: 90%;
+    margin: 0 auto;
     border-radius: 16px;
 }
 
@@ -104,92 +102,93 @@ body {
     border-radius: 12px;
     border: 1px solid var(--border);
     overflow: hidden;
-    
-    /* choix des pays*/
 }
+
+/* Choix des pays */
 .toggle-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 240px; /* 🔹 élargis ici selon ton goût : 220–260px */
-  padding: 10px 15px;
-  font-size: 16px;
-  background-color: #1e1e2f; /* couleur du fond */
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 240px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #1e1e2f;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
 }
+
 .toggle-btn:hover {
-  background-color: #2b2b45;
+    background-color: #2b2b45;
 }
-                            /**** Version mobile ****/
+
+/**** Version mobile ****/
 
 @media (max-width: 625px) {
 
-  /* 🔵 Conteneur des 4 boutons */
-  .top-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 colonnes */
-    gap: 10px;
-    width: 100%;
-    padding: 10px;
-    position: relative; /* pas de absolute/fixed */
-  }
-
-  /* 🔵 Boutons */
-  .btn-top,
-  .monetag-btn {
-    width: 100%;
-    text-align: center;
-    padding: 20px 12px;
-    border-radius: 10px;
-    font-weight: bold;
-    height: 20vh;
-  }
-
-  /* 🔵 Carte */
-  #map {
-    width: 100%;
-    height: 30vh;
-  }
-
-  /* 🔵 Météo */
-  #weather-local,
-  #weather-radio {
-    width: 100%;
-    text-align: center;
-  }
-    /* choix des pays*/
-  @media (max-width: 600px) {
-  .toggle-btn {
-    width: 180px;
-    font-size: 14px;
+    /* 🔵 Conteneur des 4 boutons */
+    .top-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 100%;
+        padding: 10px;
+        position: relative;
     }
-  }
- 
-  /* 🔵 Liste des pays */
-  .country-list {
-    max-height: 300px;
-    overflow-y: auto;
-  }
 
-  /* 🔵 Lecteur audio */
-  #audio-player {
-    width: 100%;
-  }
+    /* 🔵 Boutons */
+    .btn-top,
+    .monetag-btn {
+        width: 100%;
+        text-align: center;
+        padding: 20px 12px;
+        border-radius: 10px;
+        font-weight: bold;
+        height: 20vh;
+    }
 
-  /* 🔵 Loader */
-  .loader-spinner {
-    width: 24px;
-    height: 24px;
-  }
+    /* 🔵 Carte */
+    #map {
+        width: 100%;
+        height: 30vh;
+    }
+
+    /* 🔵 Météo */
+    #weather-local,
+    #weather-radio {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Choix des pays */
+    @media (max-width: 600px) {
+        .toggle-btn {
+            width: 180px;
+            font-size: 14px;
+        }
+    }
+
+    /* 🔵 Liste des pays */
+    .country-list {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    /* 🔵 Lecteur audio */
+    #audio-player {
+        width: 100%;
+    }
+
+    /* 🔵 Loader */
+    .loader-spinner {
+        /* Dimensions déjà définies plus bas */
+    }
 }
 
-                      /*** ICI la fin de la version GSM ****/
-
+/*** ICI la fin de la version GSM ****/
 
 .weather-column {
     display: flex;
@@ -199,7 +198,7 @@ body {
 }
 
 .weather-box {
-    background:#d7eaff;
+    background: #d7eaff;
     color: #135597;
     padding: 12px;
     border-radius: 14px;
@@ -262,7 +261,6 @@ body {
 }
 
 /* Controls */
-
 .controls label {
     display: block;
     margin-top: 8px;
@@ -287,10 +285,12 @@ body {
     padding: 10px;
     margin-top: 10px;
 }
-         /* Hidden */
+
+/* Hidden */
 .hidden {
     display: none !important;
 }
+
 .country-item {
     display: flex;
     align-items: center;
@@ -348,10 +348,12 @@ body {
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-            /* Search */
+/* Search */
 .search-box {
     margin: 10px 0;
 }
@@ -369,18 +371,18 @@ body {
     font-size: 0.8rem;
     color: var(--muted);
 }
-          /* Radios */
+
+/* Radios */
 #radios {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 14px;
     justify-items: center;
-    /*margin-top: 10px;*/
 }
 
 .radio-item {
-    width: 100px;          /* Taille réduite */
-    height: 100px;         /* Hauteur contrôlée */
+    width: 100px;
+    height: 100px;
     background: #0d1b2a;
     padding: 10px;
     border-radius: 12px;
@@ -391,13 +393,14 @@ body {
     justify-content: space-between;
     position: relative;
 }
+
 .radio-name {
     font-weight: bold;
-    position:absolute;
+    position: absolute;
     top: 60px;
-    color: #acff11ee
-    
+    color: #acff11ee;
 }
+
 .radio-card img {
     width: 50px;
     height: 50px;
@@ -411,12 +414,14 @@ body {
     transform: scale(1.05);
     box-shadow: 0 0 15px #1e90ff;
 }
+
 .radio-genre {
     position: absolute;
-    top: 0;  
+    top: 0;
     font-size: 0.8rem;
-    color: #ff1e; 
+    color: #ff1e;
 }
+
 .fav-btn {
     position: absolute;
     top: 8px;
@@ -434,12 +439,11 @@ body {
     bottom: 0;
     background: #020617;
     border-top: 1px solid var(--border);
-   /*padding: 6px 10px;*/
 }
 
 #audio-player audio {
     width: 100%;
-    height:20px;
+    height: 20px;
 }
 
 /* Mini player */
@@ -494,14 +498,15 @@ body {
 }
 
 .modal-content {
-    background: #d7eaff; /* bleu clair */
-    color: #000; 
+    background: #d7eaff;
+    color: #000;
     margin: 10% auto;
     padding: 20px;
     border-radius: 12px;
     width: 90%;
     max-width: 500px;
 }
+
 .modal-content h2,
 .modal-content p {
     color: #000;
@@ -512,169 +517,181 @@ body {
     .weather-map-wrapper {
         flex-direction: column;
     }
+
     .weather-column {
         width: 500%;
     }
-   
 }
+
 /* Correction du flou des tuiles Leaflet */
 .leaflet-tile {
-  image-rendering: crisp-edges; /* ou pixelated */
-  transform: scale(1); /* évite le flou */
+    image-rendering: crisp-edges;
+    transform: scale(1);
 }
+
 body {
-  background-color: #0b0c1a !important; /* fond bleu nuit */
-  color: #ffffff !important; /* texte blanc forcé */
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+    background-color: #0b0c1a !important;
+    color: #ffffff !important;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
+
 h1, h2, h3 {
-  color: #4da6ff; /* bleu clair pour les titres */
+    color: #4da6ff;
 }
 
 a {
-  color: #66ccff;
-  text-decoration: none;
+    color: #66ccff;
+    text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
+
 .btn-retour {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 10px 20px;
-  background-color: #0078ff;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #0078ff;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-retour:hover {
-  background-color: #005fcc;
-  transform: scale(1.05);
+    background-color: #005fcc;
+    transform: scale(1.05);
 }
 
-            /* fenetre blog*/ 
+/* fenetre blog */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  color: #222;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #222;
 }
 
 .blog-header {
-  text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(135deg, #0077cc, #00aaff);
-  color: white;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #0077cc, #00aaff);
+    color: white;
 }
 
 .blog-container {
-  display: grid;
-  gap: 25px;
-  padding: 20px;
-  max-width: 900px;
-  margin: auto;
+    display: grid;
+    gap: 25px;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
 }
 
 .post {
-  background:#00c7ff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
+    background: #00c7ff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
 }
 
 .post img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .post-content {
-  padding: 15px;
+    padding: 15px;
 }
 
 .post h2 a {
-  color: #0077cc;
-  text-decoration: none;
+    color: #0077cc;
+    text-decoration: none;
 }
 
 .post p {
-  margin: 10px 0;
+    margin: 10px 0;
 }
 
 .read-more {
-  display: inline-block;
-  margin-top: 10px;
-  color: #0077cc;
-  font-weight: bold;
-  text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    color: #0077cc;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .read-more:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .blog-footer {
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  background: #222;
-  color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: #222;
+    color: white;
 }
+
 .calendar {
-  text-align: center;
+    text-align: center;
 }
 
 #calendar-box {
-  display: inline-block;
-  padding: 20px 30px;
-  background: #1f2937;
-  border-radius: 12px;
-  border: 1px solid #374151;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  animation: pop 0.6s ease-in-out;
+    display: inline-block;
+    padding: 20px 30px;
+    background: #1f2937;
+    border-radius: 12px;
+    border: 1px solid #374151;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    animation: pop 0.6s ease-in-out;
 }
 
 #calendar-day {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #60a5fa;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #60a5fa;
 }
 
 #calendar-month {
-  font-size: 1.4rem;
-  margin-top: 5px;
-  color: #93c5fd;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    color: #93c5fd;
 }
 
 #calendar-year {
-  font-size: 1rem;
-  margin-top: 3px;
-  color: #4fc3f7;
+    font-size: 1rem;
+    margin-top: 3px;
+    color: #4fc3f7;
 }
 
 @keyframes pop {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* repositionner les pubs Monetag à gauche */
 div[id^="monetag"] {
-  right: auto !important;
-  left: 10px !important;
-  top: 20px !important;
-  z-index: 9999 !important;
+    right: auto !important;
+    left: 10px !important;
+    top: 20px !important;
+    z-index: 9999 !important;
 }
 
 .monetag-btn:hover {
-  background-color: #007acc;
-  transform: scale(1.05);
+    background-color: #007acc;
+    transform: scale(1.05);
 }
 
 /* ================================
@@ -813,4 +830,3 @@ div[id^="monetag"] {
         font-size: 23px;
     }
 }
-
