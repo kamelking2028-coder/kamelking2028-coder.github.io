@@ -676,3 +676,141 @@ div[id^="monetag"] {
   background-color: #007acc;
   transform: scale(1.05);
 }
+
+/* ================================
+   🌍 BOUTON LIVE - BOUTON PRINCIPAL
+   ================================ */
+
+.live-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-width: 230px;
+    padding: 14px 22px;
+
+    border-radius: 16px;
+    text-decoration: none;
+    color: #fff;
+
+    background: linear-gradient(135deg, #ff1744, #ff6d00);
+
+    box-shadow:
+        0 6px 20px rgba(255, 23, 68, 0.45),
+        0 0 0 2px rgba(255,255,255,0.15) inset;
+
+    font-family: Arial, sans-serif;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
+
+    animation: live-pulse 2s infinite;
+}
+
+/* Icône 🌍 */
+
+.live-icon {
+    font-size: 32px;
+    line-height: 1;
+}
+
+/* Texte */
+
+.live-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.1;
+}
+
+.live-text strong {
+    font-size: 23px;
+    letter-spacing: 1px;
+}
+
+.live-text small {
+    margin-top: 4px;
+    font-size: 12px;
+    opacity: 0.95;
+}
+
+/* Flèche */
+
+.live-arrow {
+    font-size: 25px;
+    margin-left: 5px;
+
+    transition: transform 0.25s ease;
+}
+
+/* Survol ordinateur */
+
+.live-button:hover {
+    transform: scale(1.06);
+
+    box-shadow:
+        0 10px 30px rgba(255, 23, 68, 0.65),
+        0 0 25px rgba(255, 109, 0, 0.45);
+
+    filter: brightness(1.08);
+}
+
+.live-button:hover .live-arrow {
+    transform: translateX(6px);
+}
+
+/* Animation légère */
+
+@keyframes live-pulse {
+    0%, 100% {
+        box-shadow:
+            0 6px 20px rgba(255, 23, 68, 0.45),
+            0 0 0 2px rgba(255,255,255,0.15) inset;
+    }
+
+    50% {
+        box-shadow:
+            0 8px 28px rgba(255, 23, 68, 0.65),
+            0 0 18px rgba(255, 109, 0, 0.35);
+    }
+}
+
+/* 📱 Téléphone */
+
+@media (max-width: 600px) {
+
+    .live-button {
+        width: calc(100% - 30px);
+        max-width: 360px;
+
+        min-width: 0;
+
+        padding: 16px 18px;
+        margin: 10px auto;
+
+        border-radius: 18px;
+    }
+
+    .live-icon {
+        font-size: 34px;
+    }
+
+    .live-text strong {
+        font-size: 24px;
+    }
+
+    .live-text small {
+        font-size: 11px;
+    }
+
+    .live-arrow {
+        font-size: 23px;
+    }
+}
+
