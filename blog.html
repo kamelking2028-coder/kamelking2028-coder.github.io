@@ -1,219 +1,416 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-      <!---Monetag-->
-     <script async data-cfasync="false"
-           src="https://3nbf4.com/act/tag.min.js"
-           data-zone="11327421"></script>
-
-    <script>
-    (function(s) {
-        s.dataset.zone = '11661778';
-        s.src = 'https://al5sm.com/tag.min.js';
-    })(
-        [document.documentElement, document.body]
-           .filter(Boolean)
-           .pop()
-           .appendChild(document.createElement('script'))
-   );
-   </script>
-    
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Radio Monde – Blog</title>
+    <title>Blog Radio Monde – Guide d'écoute et découverte des radios</title>
 
-    <!-- Facebook App ID -->
-    <meta property="fb:app_id" content="1433349121966993" />
+    <meta name="description" content="Découvrez comment utiliser Radio Monde, explorer les radios en ligne par pays et résoudre les problèmes courants de lecture.">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Blog – Radio Monde By‑KML">
-    <meta property="og:description" content="Articles, nouveautés, météo et mises à jour du projet Radio Monde.">
+    <meta name="theme-color" content="#0b1220">
+
+    <link rel="canonical" href="https://kamelking2028-coder.github.io/blog.html">
+
+    <meta property="og:title" content="Blog Radio Monde – Explorer les radios du monde">
+    <meta property="og:description" content="Guides pratiques pour découvrir les radios en ligne et utiliser Radio Monde.">
     <meta property="og:image" content="https://kamelking2028-coder.github.io/icons/icon-512.png">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kamelking2028-coder.github.io/blog.html">
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://kamelking2028-coder.github.io/blog.html">
-     <script async data-cfasync="false" src="https://3nbf4.com/act/tag.min.js" data-zone="11327421"></script>  
-<style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #0b1220;
-      color: #e5e7eb;
-    }
+    <style>
+        :root {
+            color-scheme: dark;
+            --background: #0b1220;
+            --surface: #111827;
+            --border: #263247;
+            --text: #e5e7eb;
+            --muted: #a8b2c3;
+            --accent: #60a5fa;
+        }
 
-    header {
-      padding: 1rem 1.5rem;
-      background: #111827;
-      border-bottom: 1px solid #1f2937;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+        * {
+            box-sizing: border-box;
+        }
 
-    header h1 {
-      margin: 0;
-      font-size: 1.2rem;
-      animation: fadeIn 2s ease-in-out;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    header a {
-      color: #9ca3af;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+        }
 
-    header a:hover {
-      color: #e5e7eb;
-    }
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1rem 1.5rem;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+        }
 
-    /* Animation */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+        header a,
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
 
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1.5rem 3rem;
-    }
+        header a:hover,
+        footer a:hover {
+            text-decoration: underline;
+        }
 
-    .banner {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    }
+        main {
+            width: min(900px, 100%);
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
 
-    .post {
-      padding: 1.25rem 1.5rem;
-      border-radius: 0.75rem;
-      background: #111827;
-      border: 1px solid #1f2937;
-      margin-bottom: 1.5rem;
-    }
+        .hero {
+            padding: 1rem 0 1.5rem;
+        }
 
-    .post h2 {
-      margin: 0 0 0.5rem;
-      font-size: 1.2rem;
-    }
+        .eyebrow {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+        }
 
-    .post time {
-      display: block;
-      font-size: 0.8rem;
-      color: #9ca3af;
-      margin-bottom: 0.75rem;
-    }
+        h1 {
+            font-size: clamp(1.8rem, 5vw, 2.7rem);
+            line-height: 1.2;
+            margin: 0.5rem 0 1rem;
+        }
 
-    .post p {
-      margin: 0.25rem 0;
-      line-height: 1.5;
-      font-size: 0.95rem;
-    }
+        h2 {
+            font-size: 1.45rem;
+            line-height: 1.35;
+            margin-top: 0;
+        }
 
-    .daily-image img {
-      width: 100%;
-      border-radius: 12px;
-      margin: 1rem 0;
-    }
+        h3 {
+            font-size: 1.12rem;
+            margin-top: 1.5rem;
+        }
 
-    .updates ul {
-      padding-left: 20px;
-    }
+        p {
+            margin: 0.75rem 0;
+        }
 
-    iframe {
-      border-radius: 12px;
-      margin-top: 1rem;
-      border: none;
-    }
+        .lead {
+            font-size: 1.1rem;
+            color: var(--muted);
+        }
 
-    footer {
-      text-align: center;
-      font-size: 0.8rem;
-      color: #6b7280;
-      padding-bottom: 1.5rem;
-      margin-top: 2rem;
-    }
- </style>
+        .banner {
+            display: block;
+            width: 100%;
+            max-height: 260px;
+            object-fit: cover;
+            border-radius: 14px;
+            margin: 1.25rem 0;
+        }
+
+        .post {
+            padding: 1.4rem;
+            margin-bottom: 1.25rem;
+            border-radius: 14px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+        }
+
+        .post ul,
+        .post ol {
+            padding-left: 1.5rem;
+        }
+
+        .post li {
+            margin: 0.5rem 0;
+        }
+
+        .muted {
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .weather-frame {
+            display: block;
+            width: 100%;
+            height: 300px;
+            margin-top: 1rem;
+            border: 0;
+            border-radius: 12px;
+            background: #fff;
+        }
+
+        footer {
+            padding: 1.5rem;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 1rem;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            .post {
+                padding: 1.1rem;
+            }
+
+            .weather-frame {
+                height: 260px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <h1>🌍 Radio Monde – Blog</h1>
-    <a href="index.html">← Retour à la carte</a>
-  </header>
+    <header>
+        <strong>🌍 Radio Monde – Blog</strong>
+        <a href="index.html">← Retour à la carte des radios</a>
+    </header>
 
-  <main>
-     <!-- Météo -->
-    <section class="post">
-      <h2>🌦️ Météo – Bruxelles</h2>
-      <iframe src="https://www.meteoblue.com/en/weather/widget/three/brussels"
-              style="width:100%; height:400px;"></iframe>
-      <p>La météo influence les radios que nous écoutons. Voici la météo actuelle à Bruxelles.</p>
-    </section>  
-    <!-- Bannière -->
-    <img src="icons/logo.jpg" alt="Radio Monde" class="banner">
+    <main>
+        <section class="hero">
+            <p class="eyebrow">Le carnet de Radio Monde</p>
 
-    <!-- Image du jour -->
-    <section class="post daily-image">
-      <h2>📸 Image du jour</h2>
-      <img src="icons/radio2.png" alt="Image du jour">
-      <p>Chaque jour, une image inspirante autour du monde, des radios ou des cultures.</p>
-    </section>    
-      
-    <!-- Nouveautés -->
-    <section class="post updates">
-      <h2>✨ Nouveautés du projet</h2>
-      <ul>
-        <li>Ajout de nouvelles radios africaines</li>
-        <li>Optimisation du lecteur audio</li>
-        <li>Amélioration du design mobile</li>
-        <li>Préparation d’un mode clair</li>
-      </ul>
-    </section>
+            <h1>Écouter le monde, une radio à la fois</h1>
 
-    <!-- Article principal -->
-   <section class="post">
-      <time id="date-du-jour"></time>
-       <h2>Bienvenue sur le blog Radio Monde, créé par MHALLA Kamel</h2>
-       <p>
-          Ce blog accompagne le projet Radio Monde : une carte interactive des radios du monde,
-          pensée pour rester simple, légale et agréable à utiliser.
-       </p>
-    </section>
-     <script>
-         const options = { day: 'numeric', month: 'long', year: 'numeric' };
-         const aujourdHui = new Date().toLocaleDateString('fr-FR', options);
-         document.getElementById('date-du-jour').textContent = aujourdHui;
-         document.getElementById('date-du-jour').setAttribute('datetime', new Date().toISOString().split('T')[0]);
-      </script>
+            <p class="lead">
+                Radio Monde est un projet personnel qui facilite la découverte
+                des radios accessibles en ligne. Ce blog présente des conseils
+                d'utilisation, des explications pratiques et les évolutions du
+                projet.
+            </p>
 
-      <!---<time datetime="2026-06-27">27 juin 2026</time>-->
-      <p>
-        Ici, je note les évolutions du projet, les idées futures, et quelques réflexions
-        sur le streaming, les satellites et la cartographie des médias.
-      </p>
-    </section>
-    <!-- PWA -->
-    <section class="post">
-      <h2>📱 Première version du PWA</h2>
-      <time id="date-du-jour"></time>
-      <!--time datetime="2026-06-27">27 juin 2026</time>-->
-      <p>
-        La version PWA de Radio Monde est désormais installable sur mobile. L’objectif reste
-        de garder une structure légère, facile à maintenir, tout en améliorant l’expérience
-        sur téléphone.
-      </p>
-      <p>
-        Les prochaines étapes : affiner le design, ajouter quelques radios supplémentaires,
-        et documenter les choix techniques pour garder le projet clair.
-      </p>
-    </section>
+            <img
+                src="icons/logo.jpg"
+                alt="Logo du projet Radio Monde"
+                class="banner"
+                width="900"
+                loading="lazy"
+            >
+        </section>
+
+        <article class="post">
+            <h2>Comment utiliser Radio Monde ?</h2>
+
+            <p>
+                Une radio en ligne permet d'écouter une station à travers
+                Internet, sans avoir besoin d'un récepteur FM traditionnel.
+                Selon la station, le programme peut proposer de la musique,
+                des informations, des émissions culturelles, des débats ou
+                des contenus consacrés à la vie locale.
+            </p>
+
+            <p>
+                Radio Monde rassemble des accès à des stations du monde entier
+                dans une interface conçue pour faciliter leur découverte.
+                Voici une méthode simple pour commencer.
+            </p>
+
+            <ol>
+                <li>
+                    <strong>Ouvrez la carte :</strong>
+                    rendez-vous sur la page d'accueil de Radio Monde.
+                </li>
+                <li>
+                    <strong>Choisissez une station :</strong>
+                    explorez les stations disponibles et sélectionnez celle
+                    que vous souhaitez écouter.
+                </li>
+                <li>
+                    <strong>Lancez la lecture :</strong>
+                    utilisez les commandes du lecteur et vérifiez que le son
+                    est activé sur votre appareil.
+                </li>
+                <li>
+                    <strong>Explorez d'autres programmes :</strong>
+                    essayez différentes stations pour découvrir des langues,
+                    des styles musicaux et des émissions variés.
+                </li>
+            </ol>
+
+            <p>
+                La disponibilité dépend du flux proposé par chaque station.
+                Une station peut être temporairement inaccessible, même si
+                son nom apparaît dans une liste.
+            </p>
+        </article>
+
+        <article class="post">
+            <h2>Comment découvrir des radios de différents pays ?</h2>
+
+            <p>
+                Écouter des radios d'autres pays est une manière de découvrir
+                de nouvelles musiques, des accents, des langues et des sujets
+                d'actualité qui ne sont pas toujours présents dans les médias
+                que l'on écoute habituellement.
+            </p>
+
+            <h3>Choisir selon ses centres d'intérêt</h3>
+
+            <p>
+                Vous pouvez commencer par un pays dont vous connaissez la
+                langue, puis essayer des stations proposant d'autres styles
+                de musique ou des programmes culturels. La station la plus
+                intéressante n'est pas nécessairement la plus connue :
+                certaines émissions locales donnent un aperçu de la vie
+                quotidienne et des goûts musicaux d'une région.
+            </p>
+
+            <h3>Prendre le temps d'explorer</h3>
+
+            <p>
+                Essayez plusieurs stations avant de vous décider. Certaines
+                privilégient les informations, d'autres la musique, le sport
+                ou les échanges avec les auditeurs. Les programmes peuvent
+                changer selon l'heure et le jour.
+            </p>
+
+            <p>
+                Le but de Radio Monde est de rendre cette exploration plus
+                simple en regroupant les accès aux stations dans un même
+                endroit.
+            </p>
+        </article>
+
+        <article class="post">
+            <h2>Pourquoi une radio en ligne ne démarre-t-elle pas toujours ?</h2>
+
+            <p>
+                Un lecteur peut rester silencieux ou afficher une erreur
+                même lorsque la connexion Internet fonctionne. Plusieurs
+                causes sont possibles :
+            </p>
+
+            <ul>
+                <li>Le serveur de diffusion de la station est momentanément indisponible.</li>
+                <li>Le flux a changé d'adresse ou a été arrêté par son diffuseur.</li>
+                <li>Le navigateur ou l'appareil ne prend pas en charge le format du flux.</li>
+                <li>Le volume est coupé ou la sortie audio sélectionnée n'est pas la bonne.</li>
+                <li>La connexion Internet est instable.</li>
+            </ul>
+
+            <h3>Que faire en cas de problème ?</h3>
+
+            <p>
+                Vérifiez d'abord le volume et la connexion, puis réessayez
+                la lecture. Si le problème persiste, essayez une autre
+                station. Si plusieurs stations ne fonctionnent plus, rechargez
+                la page et testez de nouveau.
+            </p>
+
+            <p>
+                Lorsqu'un seul flux est indisponible, le problème peut venir
+                du service qui le diffuse et non de Radio Monde lui-même.
+                La disponibilité permanente de toutes les stations ne peut
+                donc pas être garantie.
+            </p>
+        </article>
+
+        <article class="post">
+            <h2>Écouter la radio sur téléphone ou sur ordinateur</h2>
+
+            <p>
+                L'écoute en ligne peut fonctionner sur plusieurs types
+                d'appareils, à condition que le navigateur et le flux audio
+                soient compatibles. Sur téléphone, vérifiez que le son ne
+                sort pas vers un casque ou un appareil Bluetooth que vous
+                n'utilisez plus.
+            </p>
+
+            <p>
+                Si votre forfait mobile comporte une limite de données,
+                gardez à l'esprit que la diffusion audio consomme des données
+                tant que vous écoutez une station. Une connexion Wi-Fi peut
+                être préférable lorsque cela est possible.
+            </p>
+
+            <p>
+                Sur un ordinateur ou un téléviseur Android, les commandes
+                disponibles dépendent de l'appareil et du lecteur utilisé.
+                Si une commande ne répond pas, vérifiez d'abord le focus,
+                les touches prises en charge et la compatibilité du navigateur.
+            </p>
+        </article>
+
+        <article class="post">
+            <h2>À propos de Radio Monde</h2>
+
+            <p>
+                Radio Monde est un projet personnel indépendant créé par
+                MHALLA Kamel. L'objectif est de faciliter la découverte
+                des radios accessibles en ligne à travers une interface
+                simple et une carte interactive.
+            </p>
+
+            <p>
+                Le projet évolue au fil des tests : fonctionnement du lecteur,
+                navigation entre les stations et amélioration de l'expérience
+                sur différents écrans.
+            </p>
+
+            <p>
+                Les flux audio et les logos sont fournis par les sources
+                correspondantes lorsqu'ils sont disponibles. Les noms,
+                les programmes et la disponibilité des stations peuvent
+                évoluer indépendamment de Radio Monde.
+            </p>
+
+            <p>
+                Si vous rencontrez un problème de lecture, notez le nom de
+                la station et l'appareil utilisé : ces informations facilitent
+                l'identification du problème.
+            </p>
+        </article>
+
+        <section class="post">
+            <h2>🌦️ Météo à Bruxelles</h2>
+
+            <p>
+                Cette rubrique propose un accès complémentaire aux
+                prévisions météorologiques de Bruxelles. Elle utilise
+                un widget fourni par Meteoblue ; les informations météo
+                proviennent de ce service externe.
+            </p>
+
+            <iframe
+                class="weather-frame"
+                src="https://www.meteoblue.com/en/weather/widget/three/brussels"
+                title="Widget météo de Bruxelles fourni par Meteoblue"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+
+            <p class="muted">
+                Si le widget ne s'affiche pas, vous pouvez consulter
+                directement le service météorologique.
+            </p>
+        </section>
+    </main>
+
     <footer>
-      Radio Monde – projet personnel gratuit - 
+        <p>Radio Monde — projet personnel indépendant.</p>
+        <p><a href="index.html">Retour à la carte des radios</a></p>
     </footer>
-  </main>
 </body>
 </html>
+
