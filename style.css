@@ -233,25 +233,72 @@ body {
 }
 
 /* Weather details panel */
+
+/* Fenêtre météo détaillée */
 .weather-details {
     display: none;
     position: fixed;
-    bottom: 0;
+
     left: 50%;
+    bottom: max(16px, env(safe-area-inset-bottom));
     transform: translateX(-50%);
-    width: 40%;
-    max-width: 360px;
-    background: #090a0c;
-    padding: 20px;
-    border-top-left-radius: 22px;
-    border-top-right-radius: 22px;
-    box-shadow: 0 -4px 12px rgba(0,0,0,0.2);
+
+    width: min(92vw, 420px);
+    max-width: calc(100vw - 24px);
+    max-height: 75vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+
+    padding: 22px;
+    color: #e5e7eb;
+    background: #111827;
+
+    border: 1px solid #334155;
+    border-radius: 20px;
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     z-index: 9999;
 }
 
+/* Affichage après clic sur la météo */
 .weather-details.show {
     display: block;
 }
+
+/* Titre */
+.weather-details h2 {
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+
+/* Informations météo */
+.weather-details p {
+    line-height: 1.6;
+    margin: 12px 0;
+}
+
+/* Bouton Fermer */
+.weather-details button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 18px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.weather-details button:hover {
+    background: #1d4ed8;
+}
+
 
 /* Container */
 .container {
