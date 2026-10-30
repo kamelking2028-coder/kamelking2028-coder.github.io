@@ -121,7 +121,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.IA-image:hover 
+.IA-Image 
 {
     background: #d7eaff;
     color: #0078ff;
