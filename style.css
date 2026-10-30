@@ -121,8 +121,11 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.toggle-btn:hover {
-    background-color: #2b2b45;
+.IA-image{
+    background: #d7eaff;
+    color: #0078ff;
+    padding: 10px 12px;
+    border-radius: 8px;
 }
 
 /**** Version mobile ****/
