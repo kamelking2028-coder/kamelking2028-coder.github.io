@@ -834,7 +834,18 @@ div[id^="monetag"] {
 .live-button:hover .live-arrow {
     transform: translateX(6px);
 }
+/* Réduire la largeur du cadre météo local */
+.weather-column {
+    min-width: 0;
+}
 
+#weather-local {
+    width: 100%;
+    max-width: 520px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
 /* Animation légère */
 
 @keyframes live-pulse {
