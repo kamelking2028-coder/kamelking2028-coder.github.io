@@ -846,7 +846,7 @@ div[id^="monetag"] {
     margin-left: auto;
     margin-right: auto;
 }
-#weather-box {
+.weather-box {
     width: 100%;
     max-width: 520px;
     box-sizing: border-box;
