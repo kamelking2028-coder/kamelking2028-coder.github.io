@@ -841,14 +841,14 @@ div[id^="monetag"] {
 
 #weather-local {
     width: 100%;
-    max-width: 520px;
+    max-width: 300px;
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
 }
 .weather-box {
     width: 100%;
-    max-width: 520px;
+    max-width: 300px;
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
