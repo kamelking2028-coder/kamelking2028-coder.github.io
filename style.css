@@ -136,6 +136,9 @@ body {
     animation: iaGlow 2.5s ease-in-out infinite;
     transition: transform 0.25s ease, filter 0.25s ease;
     cursor: pointer;
+    color: #0078ff;
+    height: 20vh;
+    width: 180px;
 }
 
 /* Halo lumineux bleu et violet */
