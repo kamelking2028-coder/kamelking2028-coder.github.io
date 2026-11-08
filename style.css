@@ -141,9 +141,9 @@ body {
     animation: iaGlow 2.5s ease-in-out infinite;
     transition: transform 0.25s ease, filter 0.25s ease;
     cursor: pointer;
-    height: 20vh;
+    height: 15vh;
     background: linear-gradient(135deg, #ff1744, #ff6d00);
-   
+    width: 180px;
 }
 
 /* Halo lumineux bleu et violet */
@@ -795,7 +795,7 @@ div[id^="monetag"] {
     align-items: center;
     justify-content: center;
     gap: 12px;
-
+    width: 180px;
     min-width: 230px;
     padding: 14px 22px;
 
