@@ -137,7 +137,7 @@ body {
     padding: 14px 22px;
     border-radius: 20px;
     text-decoration: none;
-    color: #0078ff;
+    color: #1e00ff;
     animation: iaGlow 2.5s ease-in-out infinite;
     transition: transform 0.25s ease, filter 0.25s ease;
     cursor: pointer;
