@@ -135,14 +135,14 @@ body {
 .IA-Image {
     min-width: 230px;
     padding: 14px 22px;
-    border-radius: 8px;
+    border-radius: 20px;
     text-decoration: none;
     color: #0078ff;
     animation: iaGlow 2.5s ease-in-out infinite;
     transition: transform 0.25s ease, filter 0.25s ease;
     cursor: pointer;
-    color: #0078ff;
     height: 20vh;
+    background: linear-gradient(135deg, #ff1744, #ff6d00);
    
 }
 
