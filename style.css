@@ -120,7 +120,7 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     transition: background-color 0.3s ease;
 }
-
+/*
 .IA-Image 
 {
     background: #d7eaff;
@@ -130,7 +130,37 @@ body {
     height: 20vh;
     width: 180px;
 }
+*/
+/* Animation du bouton IA-Images */
+.IA-Image {
+    animation: iaGlow 2.5s ease-in-out infinite;
+    transition: transform 0.25s ease, filter 0.25s ease;
+    cursor: pointer;
+}
 
+/* Halo lumineux bleu et violet */
+@keyframes iaGlow {
+    0%, 100% {
+        filter: drop-shadow(0 0 3px #398cff);
+    }
+    50% {
+        filter: drop-shadow(0 0 12px #a855f7);
+    }
+}
+
+/* Effet au passage de la souris */
+.IA-Image:hover {
+    transform: scale(1.06);
+    filter: brightness(1.12);
+}
+
+/* Respect des préférences de mouvement */
+@media (prefers-reduced-motion: reduce) {
+    .IA-Image {
+        animation: none;
+        transition: none;
+    }
+}
 /**** Version mobile ****/
 
 @media (max-width: 625px) {
