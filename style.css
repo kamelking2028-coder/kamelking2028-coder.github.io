@@ -186,7 +186,7 @@ body {
     /* 🔵 Boutons */
     .btn-top,
     .monetag-btn {
-        width: 100%;
+        width: 180px;
         text-align: center;
         padding: 20px 12px;
         border-radius: 10px;
