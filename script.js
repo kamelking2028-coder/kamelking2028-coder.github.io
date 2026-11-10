@@ -59,6 +59,30 @@ document.addEventListener("DOMContentLoaded", () => {
             countries = data;
             renderCountries(countries);
         });
+   
+// === Raccourcis radios populaires ===
+
+function selectPopularCountry(codePays) {
+
+    currentCountryCode = codePays;
+
+    // Revenir à l'onglet des radios
+    currentTab = "all";
+
+    tabButtons.forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.tab === "all");
+    });
+
+    // Charger les stations du pays choisi
+    afficherCarteLeaflet(codePays);
+    fetchRadios(codePays);
+
+    // Faire apparaître la liste des radios
+    document.getElementById("radios").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+}
 
     // 4) Charger les radios (si tu as cette fonction)
     // chargerRadios();
