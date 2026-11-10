@@ -940,3 +940,118 @@ div[id^="monetag"] {
         font-size: 23px;
     }
 }
+
+/* ===== VITRINE RADIOS MONDE ===== */
+
+.world-showcase {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 15px;
+    color: white;
+}
+
+.showcase-hero {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 20px;
+    background:
+      linear-gradient(135deg,
+        rgba(5,15,40,.88),
+        rgba(0,100,180,.70)),
+      url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=1400")
+      center/cover;
+    box-shadow: 0 0 20px rgba(0,150,255,.3);
+}
+
+.showcase-content {
+    max-width: 750px;
+}
+
+.showcase-label {
+    color: #65c5ff;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.showcase-hero h2 {
+    font-size: clamp(26px, 5vw, 42px);
+    color: white;
+    margin: 20px 0;
+}
+
+.showcase-hero p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.showcase-play {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 14px 25px;
+    border-radius: 30px;
+    background: #087df5;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.showcase-play:hover {
+    transform: scale(1.06);
+    background: #00bfff;
+}
+
+.showcase-heading {
+    text-align: center;
+    color: #48aaff;
+    margin: 35px 0 20px;
+}
+
+.showcase-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.showcase-card {
+    background: #19283d;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+}
+
+.showcase-card img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    display: block;
+}
+
+.showcase-card h3 {
+    color: #55b5ff;
+    padding: 0 10px;
+}
+
+.showcase-card p {
+    color: #ddd;
+    padding: 0 12px 12px;
+}
+
+@media(max-width:700px) {
+    .showcase-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .showcase-card img {
+        height: 210px;
+    }
+
+    .showcase-hero {
+        min-height: 260px;
+    }
+}
