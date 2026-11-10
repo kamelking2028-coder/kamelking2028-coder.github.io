@@ -1055,3 +1055,53 @@ div[id^="monetag"] {
         min-height: 260px;
     }
 }
+
+/* ===== RADIOS POPULAIRES ===== */
+
+.popular-countries {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.popular-countries h2 {
+    color: #48aaff;
+    font-size: 27px;
+}
+
+.popular-countries p {
+    color: #ddd;
+}
+
+.popular-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.popular-grid button {
+    padding: 17px 10px;
+    border: 1px solid #258cff;
+    border-radius: 12px;
+    background: #19283d;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.popular-grid button:hover {
+    background: #087df5;
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px #168cff;
+}
+
+@media(max-width: 650px) {
+    .popular-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
