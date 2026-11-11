@@ -99,8 +99,6 @@ window.selectPopularCountry = function(codePays) {
     }
 };
 
-});
-
 
 // === Chargement pays ==
 
