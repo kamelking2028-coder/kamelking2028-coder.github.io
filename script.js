@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
  
 // === RACCOURCIS RADIOS POPULAIRES ===
 
-window.selectPopularCountry = function(codePays) {
+ window.selectPopularCountry = function(codePays) {
 
     console.log("Pays sélectionné :", codePays);
 
