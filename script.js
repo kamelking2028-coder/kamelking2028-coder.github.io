@@ -34,71 +34,61 @@ const weatherIcons = {
     95: "⛈️", 96: "⛈️", 99: "⛈️"
 };
 
-// === ICI : initialisation au chargement ===//
+
+// === INITIALISATION AU CHARGEMENT ===
 document.addEventListener("DOMContentLoaded", () => {
 
-    // 1) Initialiser la carte correctement (une seule fois)
-    map = L.map('map', {
+    // Initialiser la carte
+    map = L.map("map", {
         scrollWheelZoom: false,
         tap: false,
         dragging: true
     }).setView([20, 0], 2);
 
-    // 2) Ajouter le fond de carte
+    // Ajouter le fond de carte
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    
         maxZoom: 19,
         attribution: "© OpenStreetMap",
         detectRetina: true
     }).addTo(map);
 
-    // 3) Charger les pays
+    // Charger les pays
     fetch("countries.json?v=" + Date.now())
         .then(res => res.json())
         .then(data => {
             countries = data;
             renderCountries(countries);
+        })
+        .catch(error => console.error("Erreur pays :", error));
+
+    // Raccourcis radios populaires
+    window.selectPopularCountry = function(codePays) {
+
+        console.log("Pays sélectionné :", codePays);
+
+        if (!codePays) return;
+
+        currentCountryCode = codePays;
+        currentTab = "all";
+
+        tabButtons.forEach(btn => {
+            btn.classList.toggle("active", btn.dataset.tab === "all");
         });
-   
-// === Raccourcis radios populaires ===
 
- 
-// === RACCOURCIS RADIOS POPULAIRES ===
+        fetchRadios(codePays);
 
- window.selectPopularCountry = function(codePays) {
+        if (map) {
+            afficherCarteLeaflet(codePays);
+        }
 
-    console.log("Pays sélectionné :", codePays);
+        document.getElementById("radios").scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    };
 
-    // Vérifier le code pays
-    if (!codePays) return;
+});
 
-    // Sélectionner le pays
-    currentCountryCode = codePays;
-    currentTab = "all";
-
-    // Activer l'onglet radios
-    tabButtons.forEach(btn => {
-        btn.classList.toggle(
-            "active",
-            btn.dataset.tab === "all"
-        );
-    });
-
-    // Charger les radios
-    fetchRadios(codePays);
-
-    // Afficher la liste des radios
-    document.getElementById("radios").scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });
-
-    // Afficher le pays sur la carte si elle est initialisée
-    if (map) {
-        afficherCarteLeaflet(codePays);
-    }
- };
-}
 /*
 // === Chargement pays ==
 
