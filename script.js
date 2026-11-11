@@ -703,3 +703,21 @@ async function geocodeLocation(city, country) {
 
     return null;
 }
+/* Fonction pour selectionner les radios par bouton*/
+window.selectPopularCountry = function(codePays) {
+    if (!codePays) return;
+
+    currentCountryCode = codePays;
+    currentTab = "all";
+
+    tabButtons.forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.tab === "all");
+    });
+
+    fetchRadios(codePays);
+    afficherCarteLeaflet(codePays);
+
+    document.getElementById("radios").scrollIntoView({
+        behavior: "smooth"
+    });
+};
