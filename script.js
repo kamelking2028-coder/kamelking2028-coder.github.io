@@ -97,9 +97,9 @@ window.selectPopularCountry = function(codePays) {
     if (map) {
         afficherCarteLeaflet(codePays);
     }
-};
-
-
+ };
+}
+/*
 // === Chargement pays ==
 
 fetch("countries.json?v=" + Date.now())
@@ -108,7 +108,7 @@ fetch("countries.json?v=" + Date.now())
         countries = data;
          renderCountries(countries);
     });
-
+*/
 // === Affichage liste pays ===
 function renderCountries(list) {
     countryListEl.innerHTML = "";
