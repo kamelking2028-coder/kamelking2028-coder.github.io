@@ -274,10 +274,6 @@ function getFlagIcon(code) {
 document.addEventListener("DOMContentLoaded", () => {
 
     // === PARTIE 1 : Code général (modales, boutons, UI) ===
-    countrySelect.addEventListener("change", () => {
-        const radios = document.getElementById("radios");
-        if (radios) radios.innerHTML = "";
-    });
 
     // === PARTIE 2 : Vérifier si la page contient la carte ===
     if (!document.getElementById("map")) {
